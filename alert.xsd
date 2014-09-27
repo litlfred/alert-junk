@@ -2,7 +2,7 @@
 <xs:schema targetNamespace="urn:openhie.org:alerting" elementFormDefault="qualified"
     xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns="urn:openhie.org:alerting">
-    <xs:complexType name="IntendedRecipient">
+    <xs:complexType name="IntendedRecipients">
         <xs:choice maxOccurs="unbounded">
             <xs:element name="QueryTarget">
                 <xs:complexType>
@@ -25,14 +25,14 @@
                                 <xs:documentation>Each target must have at least one valid contact point.  Example: text value of "+1(919)555-1212"</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
+                                <xs:sequence>
+                                    <xs:any/>
+                                </xs:sequence>
                                 <xs:attribute name="useCode"/>
                                 <xs:attribute name="useCodeScheme"/>
                                 <xs:anyAttribute/>
                             </xs:complexType>
                         </xs:element>
-                        <xs:sequence>
-                            <xs:any/>
-                        </xs:sequence>
                     </xs:sequence>
                     <xs:attribute name="id">
                         <xs:annotation>
@@ -67,7 +67,8 @@
         </xs:attribute>
         <xs:attribute name="statusCode"/>
         <xs:attribute name="statusCodeScheme"/>
-        <xs:attribute name="id"/>
+        <xs:attribute name="id" use="required"/>
+        <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
         <xs:anyAttribute/>
     </xs:complexType>
 </xs:schema>

@@ -7,55 +7,60 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_alert.xsd', 
-				'properties_IntendedRecipient_QueryTarget', 
-				'properties_IntendedRecipient_Target', 
-				'properties_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'properties_Message_content-type');
-var usedByBoxes= new Array('usedBy_IntendedRecipient_IntendedRecipient_QueryTarget_type', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_id', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_type', 
+				'properties_IntendedRecipients_QueryTarget', 
+				'properties_IntendedRecipients_Target', 
+				'properties_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'properties_Message_content-type', 
+				'properties_Message_id', 
+				'properties_Message_published');
+var usedByBoxes= new Array('usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_id', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_type', 
 				'usedBy_Message_content-type', 
 				'usedBy_Message_src', 
 				'usedBy_Message_statusCode', 
 				'usedBy_Message_statusCodeScheme', 
-				'usedBy_Message_id');
-var sourceBoxes= new Array('source_IntendedRecipient_QueryTarget', 
-				'source_IntendedRecipient_Target', 
-				'source_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'source_IntendedRecipient', 
+				'usedBy_Message_id', 
+				'usedBy_Message_published');
+var sourceBoxes= new Array('source_IntendedRecipients_QueryTarget', 
+				'source_IntendedRecipients_Target', 
+				'source_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'source_IntendedRecipients', 
 				'source_Message', 
-				'source_IntendedRecipient_IntendedRecipient_QueryTarget_type', 
-				'source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode', 
-				'source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme', 
-				'source_IntendedRecipient_IntendedRecipient_Target_id', 
-				'source_IntendedRecipient_IntendedRecipient_Target_type', 
+				'source_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode', 
+				'source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme', 
+				'source_IntendedRecipients_IntendedRecipients_Target_id', 
+				'source_IntendedRecipients_IntendedRecipients_Target_type', 
 				'source_Message_content-type', 
 				'source_Message_src', 
 				'source_Message_statusCode', 
 				'source_Message_statusCodeScheme', 
-				'source_Message_id');
-var instanceBoxes= new Array('instance_IntendedRecipient_Target');
-var diagramBoxes= new Array('diagram_IntendedRecipient_QueryTarget', 
-				'diagram_IntendedRecipient_Target', 
-				'diagram_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'diagram_IntendedRecipient', 
+				'source_Message_id', 
+				'source_Message_published');
+var instanceBoxes= new Array('instance_IntendedRecipients_Target');
+var diagramBoxes= new Array('diagram_IntendedRecipients_QueryTarget', 
+				'diagram_IntendedRecipients_Target', 
+				'diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'diagram_IntendedRecipients', 
 				'diagram_Message');
-var annotationBoxes= new Array('annotations_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'annotations_IntendedRecipient_IntendedRecipient_QueryTarget_type', 
-				'annotations_IntendedRecipient_IntendedRecipient_Target_id', 
-				'annotations_IntendedRecipient_IntendedRecipient_Target_type', 
+var annotationBoxes= new Array('annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'annotations_IntendedRecipients_IntendedRecipients_Target_id', 
+				'annotations_IntendedRecipients_IntendedRecipients_Target_type', 
 				'annotations_Message_content-type', 
 				'annotations_Message_src');
-var attributesBoxes= new Array('attributes_IntendedRecipient_QueryTarget', 
-				'attributes_IntendedRecipient_Target', 
-				'attributes_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'attributes_IntendedRecipient', 
+var attributesBoxes= new Array('attributes_IntendedRecipients_QueryTarget', 
+				'attributes_IntendedRecipients_Target', 
+				'attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'attributes_IntendedRecipients', 
 				'attributes_Message');
-var modelBoxes= new Array('model_IntendedRecipient_QueryTarget', 
-				'model_IntendedRecipient_Target', 
-				'model_IntendedRecipient', 
+var modelBoxes= new Array('model_IntendedRecipients_QueryTarget', 
+				'model_IntendedRecipients_Target', 
+				'model_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'model_IntendedRecipients', 
 				'model_Message');
 
       
@@ -373,9 +378,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -413,7 +418,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                              </div>
                                           </td>
@@ -458,13 +463,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">IntendedRecipient/QueryTarget/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">IntendedRecipient/Target/@id</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">IntendedRecipient/Target/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCode</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCodeScheme</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">IntendedRecipients/Target/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                                 <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
+                                                <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
@@ -512,9 +518,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -552,7 +558,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Complex_Type" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                           <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                        </div>
                                     </td>
@@ -591,13 +597,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">IntendedRecipient/QueryTarget/@type</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">IntendedRecipient/Target/@id</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">IntendedRecipient/Target/@type</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCode</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCodeScheme</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">IntendedRecipients/Target/@type</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                           <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                           <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
+                                          <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                           <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
                                           <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
                                           <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
@@ -646,9 +653,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdElement" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -686,7 +693,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdComplex_Type" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                              </div>
                                           </td>
@@ -725,13 +732,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdAttribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">IntendedRecipient/QueryTarget/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">IntendedRecipient/Target/@id</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">IntendedRecipient/Target/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCode</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCodeScheme</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">IntendedRecipients/Target/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                                 <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
+                                                <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
@@ -806,7 +814,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_QueryTarget"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / QueryTarget</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_QueryTarget"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / QueryTarget</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -825,20 +833,20 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipient_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipient_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_QueryTarget');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_IntendedRecipient_QueryTarget" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_QueryTarget.png" usemap="#alert_xsd_Element_QueryTarget" /><map name="alert_xsd_Element_QueryTarget" id="alert_xsd_Element_QueryTarget">
-                                 <area alt="index.tmp#IntendedRecipient_IntendedRecipient_QueryTarget_type" href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" coords="141,40,201,64" /></map></div>
+                           <div id="diagram_IntendedRecipients_QueryTarget" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_QueryTarget.png" usemap="#alert_xsd_Element_QueryTarget" /><map name="alert_xsd_Element_QueryTarget" id="alert_xsd_Element_QueryTarget">
+                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_QueryTarget_type" href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" coords="141,40,201,64" /></map></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipient_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipient_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_QueryTarget');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_IntendedRecipient_QueryTarget" style="display:block">
+                           <div id="properties_IntendedRecipients_QueryTarget" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -849,19 +857,19 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipient_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipient_QueryTarget');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_QueryTarget');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipient_QueryTarget" style="display:block"><b>ANY element from ANY namespace</b></div>
+                           <div id="model_IntendedRecipients_QueryTarget" style="display:block"><b>ANY element from ANY namespace</b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipient_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipient_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_QueryTarget');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipient_QueryTarget" style="display:block">
+                           <div id="attributes_IntendedRecipients_QueryTarget" style="display:block">
                               <table class="attributesTable">
                                  <thead>
                                     <tr>
@@ -872,7 +880,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">type</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">type</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -898,10 +906,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_QueryTarget');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_QueryTarget" style="display:block">
+                           <div id="source_IntendedRecipients_QueryTarget" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
@@ -937,7 +945,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / Target</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / Target</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -956,22 +964,22 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipient_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipient_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_Target');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_IntendedRecipient_Target" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_Target.png" usemap="#alert_xsd_Element_Target" /><map name="alert_xsd_Element_Target" id="alert_xsd_Element_Target">
-                                 <area alt="index.tmp#IntendedRecipient_IntendedRecipient_Target_id" href="index.html#IntendedRecipient_IntendedRecipient_Target_id" coords="108,40,165,64" />
-                                 <area alt="index.tmp#IntendedRecipient_IntendedRecipient_Target_type" href="index.html#IntendedRecipient_IntendedRecipient_Target_type" coords="108,104,168,128" />
-                                 <area alt="index.tmp#IntendedRecipient_IntendedRecipient_Target_contactPoint" href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" coords="186,235,284,259" /></map></div>
+                           <div id="diagram_IntendedRecipients_Target" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_Target.png" usemap="#alert_xsd_Element_Target" /><map name="alert_xsd_Element_Target" id="alert_xsd_Element_Target">
+                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_id" href="index.html#IntendedRecipients_IntendedRecipients_Target_id" coords="108,40,165,64" />
+                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_type" href="index.html#IntendedRecipients_IntendedRecipients_Target_type" coords="108,104,168,128" />
+                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_contactPoint" href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" coords="186,239,284,263" /></map></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipient_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipient_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_Target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_IntendedRecipient_Target" style="display:block">
+                           <div id="properties_IntendedRecipients_Target" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -982,23 +990,23 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipient_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipient_Target');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_Target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipient_Target" style="display:block"><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint+</a></b> , <b>ANY element from ANY namespace</b></div>
+                           <div id="model_IntendedRecipients_Target" style="display:block"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint+</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b></td>
+                        <td><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Instance</b></div>
-                           <div class="floatRight"><input id="button_instance_IntendedRecipient_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IntendedRecipient_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_instance_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IntendedRecipients_Target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="instance_IntendedRecipient_Target" style="display:block">
+                           <div id="instance_IntendedRecipients_Target" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;Target</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"urn:openhie.org:alerting"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1012,10 +1020,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipient_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipient_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_Target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipient_Target" style="display:block">
+                           <div id="attributes_IntendedRecipients_Target" style="display:block">
                               <table class="attributesTable">
                                  <thead>
                                     <tr>
@@ -1026,7 +1034,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">id</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">id</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1040,7 +1048,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">type</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">type</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1066,10 +1074,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_Target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_Target" style="display:block">
+                           <div id="source_IntendedRecipients_Target" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"Target"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1080,14 +1088,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
           </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Each target must have at least one valid contact point. Example: text value of "+1(919)555-1212"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
@@ -1122,7 +1130,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_IntendedRecipient_Target_contactPoint"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / contactPoint</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_contactPoint"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / contactPoint</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1141,10 +1149,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipient_IntendedRecipient_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipient_IntendedRecipient_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_IntendedRecipient_IntendedRecipient_Target_contactPoint" style="display:block">
+                           <div id="annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
@@ -1158,21 +1166,21 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipient_IntendedRecipient_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipient_IntendedRecipient_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_IntendedRecipient_IntendedRecipient_Target_contactPoint" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_contactPoint.png" usemap="#alert_xsd_Element_contactPoint" /><map name="alert_xsd_Element_contactPoint" id="alert_xsd_Element_contactPoint">
-                                 <area alt="index.tmp#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" coords="160,40,244,64" />
-                                 <area alt="index.tmp#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" coords="160,74,285,98" /></map></div>
+                           <div id="diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_contactPoint.png" usemap="#alert_xsd_Element_contactPoint" /><map name="alert_xsd_Element_contactPoint" id="alert_xsd_Element_contactPoint">
+                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" coords="160,40,244,64" />
+                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" coords="160,74,285,98" /></map></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipient_IntendedRecipient_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipient_IntendedRecipient_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_IntendedRecipient_IntendedRecipient_Target_contactPoint" style="display:block">
+                           <div id="properties_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -1187,12 +1195,19 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipient_IntendedRecipient_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipient_IntendedRecipient_Target_contactPoint');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipient_IntendedRecipient_Target_contactPoint" style="display:block">
+                           <div id="model_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block"><b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
                               <table class="attributesTable">
                                  <thead>
                                     <tr>
@@ -1203,7 +1218,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">useCode</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">useCode</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1211,7 +1226,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">useCodeScheme</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">useCodeScheme</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1231,10 +1246,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_IntendedRecipient_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_IntendedRecipient_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_IntendedRecipient_Target_contactPoint" style="display:block">
+                           <div id="source_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> name=</span><span class="tAV">"contactPoint"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1242,6 +1257,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Each target must have at least one valid contact point. Example: text value of "+1(919)555-1212"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
@@ -1267,7 +1285,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient"></a><div class="componentTitle">Complex Type <span class="qname">IntendedRecipient</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients"></a><div class="componentTitle">Complex Type <span class="qname">IntendedRecipients</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1286,32 +1304,32 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipient" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipient');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_IntendedRecipients" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_IntendedRecipient" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Complex_Type_IntendedRecipient.png" usemap="#alert_xsd_Complex_Type_IntendedRecipient" /><map name="alert_xsd_Complex_Type_IntendedRecipient" id="alert_xsd_Complex_Type_IntendedRecipient">
-                                 <area alt="index.tmp#IntendedRecipient_QueryTarget" href="index.html#IntendedRecipient_QueryTarget" coords="271,79,370,103" />
-                                 <area alt="index.tmp#IntendedRecipient_Target" href="index.html#IntendedRecipient_Target" coords="271,113,337,137" /></map></div>
+                           <div id="diagram_IntendedRecipients" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Complex_Type_IntendedRecipients.png" usemap="#alert_xsd_Complex_Type_IntendedRecipients" /><map name="alert_xsd_Complex_Type_IntendedRecipients" id="alert_xsd_Complex_Type_IntendedRecipients">
+                                 <area alt="index.tmp#IntendedRecipients_QueryTarget" href="index.html#IntendedRecipients_QueryTarget" coords="277,79,376,103" />
+                                 <area alt="index.tmp#IntendedRecipients_Target" href="index.html#IntendedRecipients_Target" coords="277,113,343,137" /></map></div>
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipient" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipient');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipient" style="display:block"><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> | <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></div>
+                           <div id="model_IntendedRecipients" style="display:block"><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> | <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b>, <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></td>
+                        <td><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b>, <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipient" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipient');" class="control" /></div>
+                           <div class="floatRight"><input id="button_attributes_IntendedRecipients" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipient" style="display:block">
+                           <div id="attributes_IntendedRecipients" style="display:block">
                               <table>
                                  <tr>
                                     <td width="100%"><b>Wildcard:  </b>ANY attribute from ANY namespace
@@ -1324,13 +1342,13 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient" style="display:block">
+                           <div id="source_IntendedRecipients" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"IntendedRecipient"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"IntendedRecipients"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
@@ -1353,14 +1371,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
               </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Each target must have at least one valid contact point. Example: text value of "+1(919)555-1212"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
@@ -1425,7 +1443,8 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                  <area alt="index.tmp#Message_src" href="index.html#Message_src" coords="143,102,200,126" />
                                  <area alt="index.tmp#Message_statusCode" href="index.html#Message_statusCode" coords="143,192,241,216" />
                                  <area alt="index.tmp#Message_statusCodeScheme" href="index.html#Message_statusCodeScheme" coords="143,226,282,250" />
-                                 <area alt="index.tmp#Message_id" href="index.html#Message_id" coords="143,260,200,284" /></map></div>
+                                 <area alt="index.tmp#Message_id" href="index.html#Message_id" coords="143,260,200,284" />
+                                 <area alt="index.tmp#Message_published" href="index.html#Message_published" coords="143,294,306,336" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1468,7 +1487,15 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                  <tr>
                                     <td class="firstColumn"><b><a href="index.html#Message_id" target="_self" title="No namespace">id</a></b></td>
                                     <td></td>
-                                    <td>optional</td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#Message_published" target="_self" title="No namespace">published</a></b></td>
+                                    <td><b>xs:dateTimeStamp</b></td>
+                                    <td>required</td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
@@ -1538,7 +1565,8 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
   </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"statusCode"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"statusCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"published"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTimeStamp"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
                                  </tr>
@@ -1561,7 +1589,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_IntendedRecipient_QueryTarget_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / <b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> / @type</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_QueryTarget_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> / @type</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1580,10 +1608,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipient_IntendedRecipient_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipient_IntendedRecipient_QueryTarget_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_IntendedRecipient_IntendedRecipient_QueryTarget_type" style="display:block">
+                           <div id="annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
@@ -1597,14 +1625,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipient_IntendedRecipient_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipient_IntendedRecipient_QueryTarget_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipient_IntendedRecipient_QueryTarget_type" style="display:block">
+                           <div id="usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></td>
+                                    <td><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1613,10 +1641,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_IntendedRecipient_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_IntendedRecipient_QueryTarget_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_IntendedRecipient_QueryTarget_type" style="display:block">
+                           <div id="source_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1644,7 +1672,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / <b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b> / @useCode</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / <b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b> / @useCode</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1663,14 +1691,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" style="display:block">
+                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></td>
+                                    <td><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1679,10 +1707,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" style="display:block">
+                           <div id="source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span></pre></td>
@@ -1706,7 +1734,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / <b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b> / @useCodeScheme</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / <b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b> / @useCodeScheme</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1725,14 +1753,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" style="display:block">
+                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></td>
+                                    <td><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1741,10 +1769,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" style="display:block">
+                           <div id="source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span></pre></td>
@@ -1768,7 +1796,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_IntendedRecipient_Target_id"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / @id</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_id"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / @id</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1787,10 +1815,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipient_IntendedRecipient_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipient_IntendedRecipient_Target_id');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_Target_id');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_IntendedRecipient_IntendedRecipient_Target_id" style="display:block">
+                           <div id="annotations_IntendedRecipients_IntendedRecipients_Target_id" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
@@ -1804,14 +1832,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipient_IntendedRecipient_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipient_IntendedRecipient_Target_id');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_id');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipient_IntendedRecipient_Target_id" style="display:block">
+                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_id" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></td>
+                                    <td><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1820,10 +1848,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_IntendedRecipient_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_IntendedRecipient_Target_id');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_id');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_IntendedRecipient_Target_id" style="display:block">
+                           <div id="source_IntendedRecipients_IntendedRecipients_Target_id" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1851,7 +1879,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipient_IntendedRecipient_Target_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b> / <b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / @type</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / @type</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1870,10 +1898,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipient_IntendedRecipient_Target_type" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipient_IntendedRecipient_Target_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_Target_type" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_Target_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_IntendedRecipient_IntendedRecipient_Target_type" style="display:block">
+                           <div id="annotations_IntendedRecipients_IntendedRecipients_Target_type" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
@@ -1887,14 +1915,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipient_IntendedRecipient_Target_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipient_IntendedRecipient_Target_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipient_IntendedRecipient_Target_type" style="display:block">
+                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_type" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></td>
+                                    <td><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1903,10 +1931,10 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipient_IntendedRecipient_Target_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipient_IntendedRecipient_Target_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipient_IntendedRecipient_Target_type" style="display:block">
+                           <div id="source_IntendedRecipients_IntendedRecipients_Target_type" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tEl">&gt;</span><span class="tI">
@@ -2258,6 +2286,22 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_Message_id" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_Message_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_Message_id" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
                            <div class="floatRight"><input id="button_usedBy_Message_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_id');" class="control" /></div>
                         </td>
@@ -2281,7 +2325,89 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                            <div id="source_Message_id" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_published"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @published</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:dateTimeStamp</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_Message_published" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_Message_published');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_Message_published" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_Message_published" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_published');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_Message_published" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Complex Type </td>
+                                    <td><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_Message_published" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_published');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_Message_published" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"published"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTimeStamp"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>

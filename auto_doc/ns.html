@@ -7,55 +7,60 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_alert.xsd', 
-				'properties_IntendedRecipient_QueryTarget', 
-				'properties_IntendedRecipient_Target', 
-				'properties_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'properties_Message_content-type');
-var usedByBoxes= new Array('usedBy_IntendedRecipient_IntendedRecipient_QueryTarget_type', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_id', 
-				'usedBy_IntendedRecipient_IntendedRecipient_Target_type', 
+				'properties_IntendedRecipients_QueryTarget', 
+				'properties_IntendedRecipients_Target', 
+				'properties_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'properties_Message_content-type', 
+				'properties_Message_id', 
+				'properties_Message_published');
+var usedByBoxes= new Array('usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_id', 
+				'usedBy_IntendedRecipients_IntendedRecipients_Target_type', 
 				'usedBy_Message_content-type', 
 				'usedBy_Message_src', 
 				'usedBy_Message_statusCode', 
 				'usedBy_Message_statusCodeScheme', 
-				'usedBy_Message_id');
-var sourceBoxes= new Array('source_IntendedRecipient_QueryTarget', 
-				'source_IntendedRecipient_Target', 
-				'source_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'source_IntendedRecipient', 
+				'usedBy_Message_id', 
+				'usedBy_Message_published');
+var sourceBoxes= new Array('source_IntendedRecipients_QueryTarget', 
+				'source_IntendedRecipients_Target', 
+				'source_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'source_IntendedRecipients', 
 				'source_Message', 
-				'source_IntendedRecipient_IntendedRecipient_QueryTarget_type', 
-				'source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode', 
-				'source_IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme', 
-				'source_IntendedRecipient_IntendedRecipient_Target_id', 
-				'source_IntendedRecipient_IntendedRecipient_Target_type', 
+				'source_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode', 
+				'source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme', 
+				'source_IntendedRecipients_IntendedRecipients_Target_id', 
+				'source_IntendedRecipients_IntendedRecipients_Target_type', 
 				'source_Message_content-type', 
 				'source_Message_src', 
 				'source_Message_statusCode', 
 				'source_Message_statusCodeScheme', 
-				'source_Message_id');
-var instanceBoxes= new Array('instance_IntendedRecipient_Target');
-var diagramBoxes= new Array('diagram_IntendedRecipient_QueryTarget', 
-				'diagram_IntendedRecipient_Target', 
-				'diagram_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'diagram_IntendedRecipient', 
+				'source_Message_id', 
+				'source_Message_published');
+var instanceBoxes= new Array('instance_IntendedRecipients_Target');
+var diagramBoxes= new Array('diagram_IntendedRecipients_QueryTarget', 
+				'diagram_IntendedRecipients_Target', 
+				'diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'diagram_IntendedRecipients', 
 				'diagram_Message');
-var annotationBoxes= new Array('annotations_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'annotations_IntendedRecipient_IntendedRecipient_QueryTarget_type', 
-				'annotations_IntendedRecipient_IntendedRecipient_Target_id', 
-				'annotations_IntendedRecipient_IntendedRecipient_Target_type', 
+var annotationBoxes= new Array('annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'annotations_IntendedRecipients_IntendedRecipients_Target_id', 
+				'annotations_IntendedRecipients_IntendedRecipients_Target_type', 
 				'annotations_Message_content-type', 
 				'annotations_Message_src');
-var attributesBoxes= new Array('attributes_IntendedRecipient_QueryTarget', 
-				'attributes_IntendedRecipient_Target', 
-				'attributes_IntendedRecipient_IntendedRecipient_Target_contactPoint', 
-				'attributes_IntendedRecipient', 
+var attributesBoxes= new Array('attributes_IntendedRecipients_QueryTarget', 
+				'attributes_IntendedRecipients_Target', 
+				'attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'attributes_IntendedRecipients', 
 				'attributes_Message');
-var modelBoxes= new Array('model_IntendedRecipient_QueryTarget', 
-				'model_IntendedRecipient_Target', 
-				'model_IntendedRecipient', 
+var modelBoxes= new Array('model_IntendedRecipients_QueryTarget', 
+				'model_IntendedRecipients_Target', 
+				'model_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'model_IntendedRecipients', 
 				'model_Message');
 
       
@@ -325,9 +330,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -365,7 +370,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                              </div>
                                           </td>
@@ -410,13 +415,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">IntendedRecipient/QueryTarget/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">IntendedRecipient/Target/@id</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">IntendedRecipient/Target/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCode</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCodeScheme</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">IntendedRecipients/Target/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                                 <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
+                                                <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
@@ -464,9 +470,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -504,7 +510,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Complex_Type" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                           <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                        </div>
                                     </td>
@@ -543,13 +549,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">IntendedRecipient/QueryTarget/@type</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">IntendedRecipient/Target/@id</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">IntendedRecipient/Target/@type</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCode</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCodeScheme</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">IntendedRecipients/Target/@type</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                           <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                           <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
+                                          <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                           <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
                                           <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
                                           <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
@@ -598,9 +605,9 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdElement" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/QueryTarget</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipient/Target/contactPoint</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -638,7 +645,7 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdComplex_Type" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient" target="_self" title="urn:openhie.org:alerting">IntendedRecipient</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                              </div>
                                           </td>
@@ -677,13 +684,14 @@ var modelBoxes= new Array('model_IntendedRecipient_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdAttribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_QueryTarget_type" target="_self" title="No namespace">IntendedRecipient/QueryTarget/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_id" target="_self" title="No namespace">IntendedRecipient/Target/@id</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_type" target="_self" title="No namespace">IntendedRecipient/Target/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCode</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipient_IntendedRecipient_Target_IntendedRecipient_IntendedRecipient_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipient/Target/contactPoint/@useCodeScheme</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_type" target="_self" title="No namespace">IntendedRecipients/Target/@type</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                                 <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
+                                                <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
                                                 <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
