@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="urn:openhie.org:alerting" elementFormDefault="qualified"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:openhie.org:alerting">
+    <xs:complexType name="IntendedRecipient">
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="QueryTarget">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:any/>
+                    </xs:sequence>
+                    <xs:attribute name="type">
+                        <xs:annotation>
+                            <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:anyAttribute/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Target">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="contactPoint">
+                            <xs:annotation>
+                                <xs:documentation>Each target must have at least one valid contact point.  Example: text value of "+1(919)555-1212"</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:attribute name="useCode"/>
+                                <xs:attribute name="useCodeScheme"/>
+                                <xs:anyAttribute/>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:sequence>
+                            <xs:any/>
+                        </xs:sequence>
+                    </xs:sequence>
+                    <xs:attribute name="id">
+                        <xs:annotation>
+                            <xs:documentation>Enterprise identifer of the the human recipient</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="type">
+                        <xs:annotation>
+                            <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:anyAttribute/>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+        <xs:anyAttribute/>
+    </xs:complexType>
+    <xs:complexType name="Message">
+        <xs:sequence>
+            <xs:any/>
+        </xs:sequence>
+        <xs:attribute name="content-type" use="required">
+            <xs:annotation>
+                <xs:documentation>mime-type</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="src">
+            <xs:annotation>
+                <xs:documentation>Optional attribute.  If present and non-empty then there can be nothing under Message element.  Otherwise content is under Message element. Similar to atom:content. If there is content may include PHI triggering audit requirements.
+</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="statusCode"/>
+        <xs:attribute name="statusCodeScheme"/>
+        <xs:attribute name="id"/>
+        <xs:anyAttribute/>
+    </xs:complexType>
+</xs:schema>
