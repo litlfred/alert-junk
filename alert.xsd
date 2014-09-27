@@ -9,7 +9,7 @@
                     <xs:sequence>
                         <xs:any/>
                     </xs:sequence>
-                    <xs:attribute name="type">
+                    <xs:attribute name="type" use="required">
                         <xs:annotation>
                             <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
                         </xs:annotation>
@@ -37,11 +37,6 @@
                     <xs:attribute name="id">
                         <xs:annotation>
                             <xs:documentation>Enterprise identifer of the the human recipient</xs:documentation>
-                        </xs:annotation>
-                    </xs:attribute>
-                    <xs:attribute name="type">
-                        <xs:annotation>
-                            <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                     <xs:anyAttribute/>
