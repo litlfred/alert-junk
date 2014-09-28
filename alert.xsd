@@ -40,8 +40,6 @@
                 </xs:complexType>
             </xs:element>
         </xs:choice>
-        <xs:attribute name="statusCode"/>
-        <xs:attribute name="statusCodeScheme"/>
         <xs:anyAttribute/>
     </xs:complexType>
     <xs:complexType name="Message">
