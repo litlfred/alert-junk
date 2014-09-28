@@ -25,9 +25,6 @@
                                 <xs:documentation>Each target must have at least one valid contact point.  Example: text value of "+1(919)555-1212"</xs:documentation>
                             </xs:annotation>
                             <xs:complexType>
-                                <xs:sequence>
-                                    <xs:any/>
-                                </xs:sequence>
                                 <xs:attribute name="useCode"/>
                                 <xs:attribute name="useCodeScheme"/>
                                 <xs:anyAttribute/>
@@ -66,4 +63,16 @@
         <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
         <xs:anyAttribute/>
     </xs:complexType>
+    <xs:element name="Alert">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="IntendedRecipients"
+                    type="IntendedRecipients"/>
+                <xs:element maxOccurs="unbounded" name="Message" type="Message"/>
+                <xs:sequence>
+                    <xs:any/>
+                </xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>
