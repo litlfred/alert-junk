@@ -7,57 +7,81 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_alert.xsd', 
-				'properties_IntendedRecipients_QueryTarget', 
-				'properties_IntendedRecipients_Target', 
-				'properties_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
-				'properties_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
+				'properties_Target_contact-point', 
+				'properties_IntendedRecipients_query-target', 
+				'properties_IntendedRecipients_target', 
+				'properties_alert', 
+				'properties_alert_intended-recipients', 
+				'properties_alert_message', 
+				'properties_QueryTarget_type', 
 				'properties_Message_content-type', 
-				'properties_Message_id', 
-				'properties_Message_published');
-var usedByBoxes= new Array('usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
-				'usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode', 
-				'usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme', 
-				'usedBy_IntendedRecipients_IntendedRecipients_Target_id', 
+				'properties_Message_published', 
+				'properties_alert_msg-id');
+var usedByBoxes= new Array('usedBy_Target', 
+				'usedBy_QueryTarget', 
+				'usedBy_IntendedRecipients', 
+				'usedBy_Message', 
+				'usedBy_Target_id', 
+				'usedBy_QueryTarget_type', 
 				'usedBy_Message_content-type', 
 				'usedBy_Message_src', 
-				'usedBy_Message_statusCode', 
-				'usedBy_Message_statusCodeScheme', 
-				'usedBy_Message_id', 
-				'usedBy_Message_published');
-var sourceBoxes= new Array('source_IntendedRecipients_QueryTarget', 
-				'source_IntendedRecipients_Target', 
-				'source_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'usedBy_Message_status-code', 
+				'usedBy_Message_status-code-scheme', 
+				'usedBy_Message_published', 
+				'usedBy_Message_subject-of-care', 
+				'usedBy_alert_msg-id');
+var sourceBoxes= new Array('source_Target_contact-point', 
+				'source_IntendedRecipients_query-target', 
+				'source_IntendedRecipients_target', 
+				'source_alert', 
+				'source_alert_intended-recipients', 
+				'source_alert_message', 
+				'source_Target', 
+				'source_QueryTarget', 
 				'source_IntendedRecipients', 
 				'source_Message', 
-				'source_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
-				'source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode', 
-				'source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme', 
-				'source_IntendedRecipients_IntendedRecipients_Target_id', 
+				'source_Target_id', 
+				'source_QueryTarget_type', 
 				'source_Message_content-type', 
 				'source_Message_src', 
-				'source_Message_statusCode', 
-				'source_Message_statusCodeScheme', 
-				'source_Message_id', 
-				'source_Message_published');
-var instanceBoxes= new Array('instance_IntendedRecipients_Target');
-var diagramBoxes= new Array('diagram_IntendedRecipients_QueryTarget', 
-				'diagram_IntendedRecipients_Target', 
-				'diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+				'source_Message_status-code', 
+				'source_Message_status-code-scheme', 
+				'source_Message_published', 
+				'source_Message_subject-of-care', 
+				'source_alert_msg-id');
+var instanceBoxes= new Array('instance_IntendedRecipients_target', 
+				'instance_alert', 
+				'instance_alert_intended-recipients');
+var diagramBoxes= new Array('diagram_Target_contact-point', 
+				'diagram_IntendedRecipients_query-target', 
+				'diagram_IntendedRecipients_target', 
+				'diagram_alert', 
+				'diagram_alert_intended-recipients', 
+				'diagram_alert_message', 
+				'diagram_Target', 
+				'diagram_QueryTarget', 
 				'diagram_IntendedRecipients', 
 				'diagram_Message');
-var annotationBoxes= new Array('annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
-				'annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type', 
-				'annotations_IntendedRecipients_IntendedRecipients_Target_id', 
+var annotationBoxes= new Array('annotations_Target_id', 
+				'annotations_QueryTarget_type', 
 				'annotations_Message_content-type', 
 				'annotations_Message_src');
-var attributesBoxes= new Array('attributes_IntendedRecipients_QueryTarget', 
-				'attributes_IntendedRecipients_Target', 
-				'attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+var attributesBoxes= new Array('attributes_IntendedRecipients_query-target', 
+				'attributes_IntendedRecipients_target', 
+				'attributes_alert', 
+				'attributes_alert_intended-recipients', 
+				'attributes_alert_message', 
+				'attributes_Target', 
+				'attributes_QueryTarget', 
 				'attributes_IntendedRecipients', 
 				'attributes_Message');
-var modelBoxes= new Array('model_IntendedRecipients_QueryTarget', 
-				'model_IntendedRecipients_Target', 
-				'model_IntendedRecipients_IntendedRecipients_Target_contactPoint', 
+var modelBoxes= new Array('model_IntendedRecipients_query-target', 
+				'model_IntendedRecipients_target', 
+				'model_alert', 
+				'model_alert_intended-recipients', 
+				'model_alert_message', 
+				'model_Target', 
+				'model_QueryTarget', 
 				'model_IntendedRecipients', 
 				'model_Message');
 
@@ -376,9 +400,12 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></div>
+                                                <div><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">Target/contact-point</a></b></div>
+                                                <div><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></div>
+                                                <div><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></div>
+                                                <div><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -418,6 +445,8 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                              <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
+                                                <div><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></div>
+                                                <div><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -461,16 +490,15 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
-                                                <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
                                                 <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
-                                                <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
-                                                <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
+                                                <div><b><a href="index.html#Message_status-code" target="_self" title="No namespace">Message/@status-code</a></b></div>
+                                                <div><b><a href="index.html#Message_status-code-scheme" target="_self" title="No namespace">Message/@status-code-scheme</a></b></div>
+                                                <div><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">Message/@subject-of-care</a></b></div>
+                                                <div><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">QueryTarget/@type</a></b></div>
+                                                <div><b><a href="index.html#Target_id" target="_self" title="No namespace">Target/@id</a></b></div>
+                                                <div><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">alert/@msg-id</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -515,9 +543,12 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></div>
+                                          <div><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></div>
+                                          <div><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">Target/contact-point</a></b></div>
+                                          <div><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></div>
+                                          <div><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></div>
+                                          <div><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -557,6 +588,8 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                        <div id="Complex_Type" class="componentGroup" style="display:block">
                                           <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                           <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
+                                          <div><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></div>
+                                          <div><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -594,16 +627,15 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
-                                          <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                           <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
-                                          <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
                                           <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                           <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
-                                          <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
-                                          <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
+                                          <div><b><a href="index.html#Message_status-code" target="_self" title="No namespace">Message/@status-code</a></b></div>
+                                          <div><b><a href="index.html#Message_status-code-scheme" target="_self" title="No namespace">Message/@status-code-scheme</a></b></div>
+                                          <div><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">Message/@subject-of-care</a></b></div>
+                                          <div><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">QueryTarget/@type</a></b></div>
+                                          <div><b><a href="index.html#Target_id" target="_self" title="No namespace">Target/@id</a></b></div>
+                                          <div><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">alert/@msg-id</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -649,9 +681,12 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdElement" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></div>
+                                                <div><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></div>
+                                                <div><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">Target/contact-point</a></b></div>
+                                                <div><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></div>
+                                                <div><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></div>
+                                                <div><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -691,6 +726,8 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                              <div id="gr_alert.xsdComplex_Type" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
+                                                <div><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></div>
+                                                <div><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -728,16 +765,15 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_alert.xsdAttribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">IntendedRecipients/QueryTarget/@type</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">IntendedRecipients/Target/@id</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCode</a></b></div>
-                                                <div><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">IntendedRecipients/Target/contactPoint/@useCodeScheme</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
-                                                <div><b><a href="index.html#Message_id" target="_self" title="No namespace">Message/@id</a></b></div>
                                                 <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
-                                                <div><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">Message/@statusCode</a></b></div>
-                                                <div><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">Message/@statusCodeScheme</a></b></div>
+                                                <div><b><a href="index.html#Message_status-code" target="_self" title="No namespace">Message/@status-code</a></b></div>
+                                                <div><b><a href="index.html#Message_status-code-scheme" target="_self" title="No namespace">Message/@status-code-scheme</a></b></div>
+                                                <div><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">Message/@subject-of-care</a></b></div>
+                                                <div><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">QueryTarget/@type</a></b></div>
+                                                <div><b><a href="index.html#Target_id" target="_self" title="No namespace">Target/@id</a></b></div>
+                                                <div><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">alert/@msg-id</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -809,7 +845,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_QueryTarget"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / QueryTarget</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Target_contact-point"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / contact-point</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -828,20 +864,96 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_Target_contact-point" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_Target_contact-point');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_IntendedRecipients_QueryTarget" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_QueryTarget.png" usemap="#alert_xsd_Element_QueryTarget" /><map name="alert_xsd_Element_QueryTarget" id="alert_xsd_Element_QueryTarget">
-                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_QueryTarget_type" href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" coords="141,40,201,64" /></map></div>
+                           <div id="diagram_Target_contact-point" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_contact-point.png" /></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_Target_contact-point" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_Target_contact-point');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_IntendedRecipients_QueryTarget" style="display:block">
+                           <div id="properties_Target_contact-point" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
+                                    <td><b>unbounded</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_Target_contact-point" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Target_contact-point');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_Target_contact-point" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> name=</span><span class="tAV">"contact-point"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_query-target"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / query-target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>urn:openhie.org:alerting</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_query-target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_query-target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_IntendedRecipients_query-target" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_query-target.png" usemap="#alert_xsd_Element_query-target" /><map name="alert_xsd_Element_query-target" id="alert_xsd_Element_query-target">
+                                 <area alt="index.tmp#QueryTarget_type" href="index.html#QueryTarget_type" coords="189,78,249,102" />
+                                 <area alt="index.tmp#QueryTarget" href="index.html#QueryTarget" coords="164,3,283,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_IntendedRecipients_query-target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_query-target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_IntendedRecipients_query-target" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -852,19 +964,19 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_QueryTarget');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_query-target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_query-target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipients_QueryTarget" style="display:block"><b>ANY element from ANY namespace</b></div>
+                           <div id="model_IntendedRecipients_query-target" style="display:block"><b>ANY element from ANY namespace</b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_query-target" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_query-target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipients_QueryTarget" style="display:block">
+                           <div id="attributes_IntendedRecipients_query-target" style="display:block">
                               <table class="attributesTable">
                                  <thead>
                                     <tr>
@@ -875,7 +987,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_QueryTarget_type" target="_self" title="No namespace">type</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">type</a></b></td>
                                     <td></td>
                                     <td>required</td>
                                     <td>
@@ -901,24 +1013,13 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_QueryTarget');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_query-target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_query-target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipients_QueryTarget" style="display:block">
+                           <div id="source_IntendedRecipients_query-target" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Example: &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"query-target"</span><span class="tAN"> type=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -940,7 +1041,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_Target"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / Target</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_target"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / target</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -959,21 +1060,26 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_target');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_IntendedRecipients_Target" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_Target.png" usemap="#alert_xsd_Element_Target" /><map name="alert_xsd_Element_Target" id="alert_xsd_Element_Target">
-                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_id" href="index.html#IntendedRecipients_IntendedRecipients_Target_id" coords="108,40,165,64" />
-                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_contactPoint" href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" coords="186,149,284,173" /></map></div>
+                           <div id="diagram_IntendedRecipients_target" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_target.png" usemap="#alert_xsd_Element_target" /><map name="alert_xsd_Element_target" id="alert_xsd_Element_target">
+                                 <area alt="index.tmp#Target_id" href="index.html#Target_id" coords="156,78,213,102" />
+                                 <area alt="index.tmp#Target_contact-point" href="index.html#Target_contact-point" coords="234,187,328,211" />
+                                 <area alt="index.tmp#Target" href="index.html#Target" coords="131,3,217,25" /></map></div>
                         </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_IntendedRecipients_target" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_IntendedRecipients_Target" style="display:block">
+                           <div id="properties_IntendedRecipients_target" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -984,28 +1090,28 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_Target');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipients_Target" style="display:block"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint+</a></b></div>
+                           <div id="model_IntendedRecipients_target" style="display:block"><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">contact-point+</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b></td>
+                        <td><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">contact-point</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Instance</b></div>
-                           <div class="floatRight"><input id="button_instance_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IntendedRecipients_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_instance_IntendedRecipients_target" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_IntendedRecipients_target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="instance_IntendedRecipients_Target" style="display:block">
+                           <div id="instance_IntendedRecipients_target" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;Target</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"urn:openhie.org:alerting"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;contactPoint</span><span class="tT"> </span><span class="tAN">useCode=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">useCodeScheme=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/contactPoint&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/Target&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;target</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"urn:openhie.org:alerting"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;contact-point</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/contact-point&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/target&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -1014,10 +1120,10 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_target" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipients_Target" style="display:block">
+                           <div id="attributes_IntendedRecipients_target" style="display:block">
                               <table class="attributesTable">
                                  <thead>
                                     <tr>
@@ -1028,7 +1134,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_id" target="_self" title="No namespace">id</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#Target_id" target="_self" title="No namespace">id</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1054,34 +1160,160 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_Target');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_IntendedRecipients_target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipients_Target" style="display:block">
+                           <div id="source_IntendedRecipients_target" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"Target"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"target"</span><span class="tAN"> type=</span><span class="tAV">"Target"</span><span class="tEl">&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="alert"></a><div class="componentTitle">Element <span class="qname">alert</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>urn:openhie.org:alerting</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_alert" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_alert');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_alert" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_alert.png" usemap="#alert_xsd_Element_alert" /><map name="alert_xsd_Element_alert" id="alert_xsd_Element_alert">
+                                 <area alt="index.tmp#alert_msg-id" href="index.html#alert_msg-id" coords="97,40,173,64" />
+                                 <area alt="index.tmp#alert_intended-recipients" href="index.html#alert_intended-recipients" coords="154,115,321,157" />
+                                 <area alt="index.tmp#alert_message" href="index.html#alert_message" coords="154,167,265,209" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_alert" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_alert');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_alert" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_alert" type="image" src="img/btM.gif" value="-" onclick="switchState('model_alert');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_alert" style="display:block"><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">intended-recipients</a></b> , <b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">message</a></b> , <b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">intended-recipients</a></b>, <b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">message</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_alert" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_alert');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_alert" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;alert</span><span class="tT"> </span><span class="tAN">msg-id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"urn:openhie.org:alerting"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;intended-recipients</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/intended-recipients&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;message</span><span class="tT"> </span><span class="tAN">content-type=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">published=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">src=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">status-code=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">status-code-scheme=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">subject-of-care=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/message&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/alert&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_alert" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_alert');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_alert" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">msg-id</a></b></td>
+                                    <td></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                              <table>
+                                 <tr>
+                                    <td width="100%"><b>Wildcard:  </b>ANY attribute from ANY namespace
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_alert" type="image" src="img/btM.gif" value="-" onclick="switchState('source_alert');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_alert" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"alert"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> name=</span><span class="tAV">"contactPoint"</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Each target must have at least one valid contact point. Example: text value of "+1(919)555-1212"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"intended-recipients"</span><span class="tAN"> type=</span><span class="tAV">"IntendedRecipients"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"message"</span><span class="tAN"> type=</span><span class="tAV">"Message"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enterprise identifer of the the human recipient</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"msg-id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
@@ -1105,7 +1337,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_contactPoint"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / contactPoint</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="alert_intended-recipients"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b> / intended-recipients</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1123,77 +1355,202 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      </tr>
                      <tr>
                         <td class="firstColumn">
-                           <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_alert_intended-recipients" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_alert_intended-recipients');" class="control" /></div>
                         </td>
-                        <td>
-                           <div id="annotations_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
-                              <div class="annotation">
-                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                    <tr>
-                                       <td width="100%"><pre><span class="tT">Each target must have at least one valid contact point.  Example: text value of "+1(919)555-1212"</span></pre></td>
-                                    </tr>
-                                 </table>
-                              </div>
-                           </div>
+                        <td class="diagram">
+                           <div id="diagram_alert_intended-recipients" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_intended-recipients.png" usemap="#alert_xsd_Element_intended-recipients" /><map name="alert_xsd_Element_intended-recipients" id="alert_xsd_Element_intended-recipients">
+                                 <area alt="index.tmp#IntendedRecipients_query-target" href="index.html#IntendedRecipients_query-target" coords="301,119,434,161" />
+                                 <area alt="index.tmp#IntendedRecipients_target" href="index.html#IntendedRecipients_target" coords="301,171,401,213" />
+                                 <area alt="index.tmp#IntendedRecipients" href="index.html#IntendedRecipients" coords="219,3,372,25" /></map></div>
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
-                        </td>
-                        <td class="diagram">
-                           <div id="diagram_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_contactPoint.png" usemap="#alert_xsd_Element_contactPoint" /><map name="alert_xsd_Element_contactPoint" id="alert_xsd_Element_contactPoint">
-                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" coords="160,40,244,64" />
-                                 <area alt="index.tmp#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" coords="160,74,285,98" /></map></div>
-                        </td>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_alert_intended-recipients" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_alert_intended-recipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
+                           <div id="properties_alert_intended-recipients" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
                                     <td><b>complex</b></td>
-                                 </tr>
-                                 <tr>
-                                    <td class="firstColumn" style="white-space: nowrap;">maxOccurs</td>
-                                    <td><b>unbounded</b></td>
                                  </tr>
                               </table>
                            </div>
                         </td>
                      </tr>
                      <tr>
-                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_alert_intended-recipients" type="image" src="img/btM.gif" value="-" onclick="switchState('model_alert_intended-recipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block"><b>ANY element from ANY namespace</b></div>
+                           <div id="model_alert_intended-recipients" style="display:block"><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">query-target</a></b> | <b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">target</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">query-target</a></b>, <b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">target</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_alert_intended-recipients" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_alert_intended-recipients');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_alert_intended-recipients" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;intended-recipients</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"urn:openhie.org:alerting"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;query-target</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/query-target&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;target</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/target&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/intended-recipients&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Attributes</b></div>
-                           <div class="floatRight"><input id="button_attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_attributes_alert_intended-recipients" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_alert_intended-recipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="attributes_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
+                           <div id="attributes_alert_intended-recipients" style="display:block">
+                              <table>
+                                 <tr>
+                                    <td width="100%"><b>Wildcard:  </b>ANY attribute from ANY namespace
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_alert_intended-recipients" type="image" src="img/btM.gif" value="-" onclick="switchState('source_alert_intended-recipients');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_alert_intended-recipients" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"intended-recipients"</span><span class="tAN"> type=</span><span class="tAV">"IntendedRecipients"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="alert_message"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b> / message</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>urn:openhie.org:alerting</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_alert_message" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_alert_message');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_alert_message" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Element_message.png" usemap="#alert_xsd_Element_message" /><map name="alert_xsd_Element_message" id="alert_xsd_Element_message">
+                                 <area alt="index.tmp#Message_content-type" href="index.html#Message_content-type" coords="167,78,274,102" />
+                                 <area alt="index.tmp#Message_src" href="index.html#Message_src" coords="167,142,224,166" />
+                                 <area alt="index.tmp#Message_status-code" href="index.html#Message_status-code" coords="167,232,269,256" />
+                                 <area alt="index.tmp#Message_status-code-scheme" href="index.html#Message_status-code-scheme" coords="167,266,316,290" />
+                                 <area alt="index.tmp#Message_published" href="index.html#Message_published" coords="167,300,330,342" />
+                                 <area alt="index.tmp#Message_subject-of-care" href="index.html#Message_subject-of-care" coords="167,386,289,410" />
+                                 <area alt="index.tmp#Message" href="index.html#Message" coords="142,3,239,25" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_alert_message" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_alert_message');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_alert_message" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_alert_message" type="image" src="img/btM.gif" value="-" onclick="switchState('model_alert_message');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_alert_message" style="display:block"><b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_alert_message" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_alert_message');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_alert_message" style="display:block">
                               <table class="attributesTable">
                                  <thead>
                                     <tr>
                                        <th>QName</th>
                                        <th width="10%">Type</th>
                                        <th width="5%">Use</th>
-                                       <th></th>
+                                       <th>Annotation</th>
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" target="_self" title="No namespace">useCode</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#Message_content-type" target="_self" title="No namespace">content-type</a></b></td>
+                                    <td></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">mime-type</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b>lang</b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1201,11 +1558,167 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" target="_self" title="No namespace">useCodeScheme</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#Message_published" target="_self" title="No namespace">published</a></b></td>
+                                    <td><b>xs:dateTimeStamp</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#Message_src" target="_self" title="No namespace">src</a></b></td>
+                                    <td></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Optional attribute.  If present and non-empty then there can be nothing under Message element.  Otherwise content is under Message element. Similar to atom:content. If there is content may include PHI triggering audit requirements.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#Message_status-code" target="_self" title="No namespace">status-code</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#Message_status-code-scheme" target="_self" title="No namespace">status-code-scheme</a></b></td>
+                                    <td></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">subject-of-care</a></b></td>
+                                    <td></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_alert_message" type="image" src="img/btM.gif" value="-" onclick="switchState('source_alert_message');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_alert_message" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"message"</span><span class="tAN"> type=</span><span class="tAV">"Message"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Target"></a><div class="componentTitle">Complex Type <span class="qname">Target</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>urn:openhie.org:alerting</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_Target');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_Target" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Complex_Type_Target.png" usemap="#alert_xsd_Complex_Type_Target" /><map name="alert_xsd_Complex_Type_Target" id="alert_xsd_Complex_Type_Target">
+                                 <area alt="index.tmp#Target_id" href="index.html#Target_id" coords="132,38,189,62" />
+                                 <area alt="index.tmp#Target_contact-point" href="index.html#Target_contact-point" coords="210,147,304,171" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_Target" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('model_Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_Target" style="display:block"><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">contact-point+</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">contact-point</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_Target');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_Target" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#Target_id" target="_self" title="No namespace">id</a></b></td>
+                                    <td></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Enterprise identifer of the the human recipient</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
                                     </td>
                                  </tr>
                               </table>
@@ -1221,25 +1734,152 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_contactPoint" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_contactPoint');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_Target" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Target');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipients_IntendedRecipients_Target_contactPoint" style="display:block">
+                           <div id="source_Target" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> name=</span><span class="tAV">"contactPoint"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Each target must have at least one valid contact point. Example: text value of "+1(919)555-1212"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"Target"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> name=</span><span class="tAV">"contact-point"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enterprise identifer of the the human recipient</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="QueryTarget"></a><div class="componentTitle">Complex Type <span class="qname">QueryTarget</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>urn:openhie.org:alerting</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_QueryTarget');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_QueryTarget" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Complex_Type_QueryTarget.png" usemap="#alert_xsd_Complex_Type_QueryTarget" /><map name="alert_xsd_Complex_Type_QueryTarget" id="alert_xsd_Complex_Type_QueryTarget">
+                                 <area alt="index.tmp#QueryTarget_type" href="index.html#QueryTarget_type" coords="165,38,225,62" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_QueryTarget');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_QueryTarget" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('model_QueryTarget');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_QueryTarget" style="display:block"><b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_QueryTarget');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_QueryTarget" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">type</a></b></td>
+                                    <td></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                              <table>
+                                 <tr>
+                                    <td width="100%"><b>Wildcard:  </b>ANY attribute from ANY namespace
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_QueryTarget" type="image" src="img/btM.gif" value="-" onclick="switchState('source_QueryTarget');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_QueryTarget" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Example: &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -1283,20 +1923,36 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                         </td>
                         <td class="diagram">
                            <div id="diagram_IntendedRecipients" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Complex_Type_IntendedRecipients.png" usemap="#alert_xsd_Complex_Type_IntendedRecipients" /><map name="alert_xsd_Complex_Type_IntendedRecipients" id="alert_xsd_Complex_Type_IntendedRecipients">
-                                 <area alt="index.tmp#IntendedRecipients_QueryTarget" href="index.html#IntendedRecipients_QueryTarget" coords="277,79,376,103" />
-                                 <area alt="index.tmp#IntendedRecipients_Target" href="index.html#IntendedRecipients_Target" coords="277,113,343,137" /></map></div>
+                                 <area alt="index.tmp#IntendedRecipients_query-target" href="index.html#IntendedRecipients_query-target" coords="277,79,410,121" />
+                                 <area alt="index.tmp#IntendedRecipients_target" href="index.html#IntendedRecipients_target" coords="277,131,377,173" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_IntendedRecipients" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_IntendedRecipients" type="image" src="img/btM.gif" value="-" onclick="switchState('model_IntendedRecipients');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_IntendedRecipients" style="display:block"><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> | <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></div>
+                           <div id="model_IntendedRecipients" style="display:block"><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">query-target</a></b> | <b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">target</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b>, <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></td>
+                        <td><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">query-target</a></b>, <b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">target</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1325,43 +1981,9 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"IntendedRecipients"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Example: &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"query-target"</span><span class="tAN"> type=</span><span class="tAV">"QueryTarget"</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"Target"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> name=</span><span class="tAV">"contactPoint"</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Each target must have at least one valid contact point. Example: text value of "+1(919)555-1212"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-                </span><span class="tEl">&lt;xs:any</span><span class="tEl">/&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enterprise identifer of the the human recipient</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"target"</span><span class="tAN"> type=</span><span class="tAV">"Target"</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
@@ -1411,10 +2033,26 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                            <div id="diagram_Message" style="display:block"><img alt="Diagram" border="0" src="img/alert_xsd_Complex_Type_Message.png" usemap="#alert_xsd_Complex_Type_Message" /><map name="alert_xsd_Complex_Type_Message" id="alert_xsd_Complex_Type_Message">
                                  <area alt="index.tmp#Message_content-type" href="index.html#Message_content-type" coords="143,38,250,62" />
                                  <area alt="index.tmp#Message_src" href="index.html#Message_src" coords="143,102,200,126" />
-                                 <area alt="index.tmp#Message_statusCode" href="index.html#Message_statusCode" coords="143,192,241,216" />
-                                 <area alt="index.tmp#Message_statusCodeScheme" href="index.html#Message_statusCodeScheme" coords="143,226,282,250" />
-                                 <area alt="index.tmp#Message_id" href="index.html#Message_id" coords="143,260,200,284" />
-                                 <area alt="index.tmp#Message_published" href="index.html#Message_published" coords="143,294,306,336" /></map></div>
+                                 <area alt="index.tmp#Message_status-code" href="index.html#Message_status-code" coords="143,192,245,216" />
+                                 <area alt="index.tmp#Message_status-code-scheme" href="index.html#Message_status-code-scheme" coords="143,226,292,250" />
+                                 <area alt="index.tmp#Message_published" href="index.html#Message_published" coords="143,260,306,302" />
+                                 <area alt="index.tmp#Message_subject-of-care" href="index.html#Message_subject-of-care" coords="143,346,265,370" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_Message" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_Message" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
                         </td>
                      </tr>
                      <tr>
@@ -1455,9 +2093,9 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#Message_id" target="_self" title="No namespace">id</a></b></td>
+                                    <td class="firstColumn"><b>lang</b></td>
                                     <td></td>
-                                    <td>required</td>
+                                    <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
@@ -1485,7 +2123,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#Message_statusCode" target="_self" title="No namespace">statusCode</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#Message_status-code" target="_self" title="No namespace">status-code</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
@@ -1493,17 +2131,19 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#Message_statusCodeScheme" target="_self" title="No namespace">statusCodeScheme</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#Message_status-code-scheme" target="_self" title="No namespace">status-code-scheme</a></b></td>
                                     <td></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
-                              </table>
-                              <table>
                                  <tr>
-                                    <td width="100%"><b>Wildcard:  </b>ANY attribute from ANY namespace
+                                    <td class="firstColumn"><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">subject-of-care</a></b></td>
+                                    <td></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
                                     </td>
                                  </tr>
                               </table>
@@ -1533,11 +2173,11 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
       </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Optional attribute. If present and non-empty then there can be nothing under Message element. Otherwise content is under Message element. Similar to atom:content. If there is content may include PHI triggering audit requirements.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"statusCode"</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"statusCodeScheme"</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"status-code"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"status-code-scheme"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"published"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTimeStamp"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:lang"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"subject-of-care"</span><span class="tEl">/&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -1559,7 +2199,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_QueryTarget_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> / @type</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Target_id"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / @id</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1578,14 +2218,14 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_Target_id');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
+                           <div id="annotations_Target_id" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Enterprise identifer of the the human recipient</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -1594,31 +2234,15 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      </tr>
                      <tr>
                         <td class="firstColumn">
-                           <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="properties_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
-                              <table class="propertiesTable">
-                                 <tr>
-                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
-                                    <td><b>required</b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Target_id');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
+                           <div id="usedBy_Target_id" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipients_QueryTarget" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/QueryTarget</a></b></td>
+                                    <td class="firstColumn">Complex Type </td>
+                                    <td><b><a href="index.html#Target" target="_self" title="urn:openhie.org:alerting">Target</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1627,15 +2251,15 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_QueryTarget_type');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Target_id');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipients_IntendedRecipients_QueryTarget_type" style="display:block">
+                           <div id="source_Target_id" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Example: &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enterprise identifer of the the human recipient</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -1658,131 +2282,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / <b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b> / @useCode</span></div>
-      <table class="rt">
-         <tr>
-            <td class="rt_cornerTopLeft"></td>
-            <td class="rt_lineTop"></td>
-            <td class="rt_cornerTopRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_lineLeft"></td>
-            <td class="rt_content">
-               <table class="component">
-                  <tbody>
-                     <tr>
-                        <td class="firstColumn"><b>Namespace</b></td>
-                        <td>No namespace</td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" style="display:block">
-                              <table class="usedByTable">
-                                 <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCode" style="display:block">
-                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                 <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCode"</span><span class="tEl">/&gt;</span></pre></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn"><b>Schema location</b></td>
-                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-            <td class="rt_lineRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_cornerBottomLeft"></td>
-            <td class="rt_lineBottom"></td>
-            <td class="rt_cornerBottomRight"></td>
-         </tr>
-      </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / <b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">contactPoint</a></b> / @useCodeScheme</span></div>
-      <table class="rt">
-         <tr>
-            <td class="rt_cornerTopLeft"></td>
-            <td class="rt_lineTop"></td>
-            <td class="rt_cornerTopRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_lineLeft"></td>
-            <td class="rt_content">
-               <table class="component">
-                  <tbody>
-                     <tr>
-                        <td class="firstColumn"><b>Namespace</b></td>
-                        <td>No namespace</td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" style="display:block">
-                              <table class="usedByTable">
-                                 <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipients_IntendedRecipients_Target_contactPoint" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target/contactPoint</a></b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="source_IntendedRecipients_IntendedRecipients_Target_IntendedRecipients_IntendedRecipients_Target_contactPoint_useCodeScheme" style="display:block">
-                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                 <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"useCodeScheme"</span><span class="tEl">/&gt;</span></pre></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn"><b>Schema location</b></td>
-                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-            <td class="rt_lineRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_cornerBottomLeft"></td>
-            <td class="rt_lineBottom"></td>
-            <td class="rt_cornerBottomRight"></td>
-         </tr>
-      </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="IntendedRecipients_IntendedRecipients_Target_id"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b> / <b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">Target</a></b> / @id</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="QueryTarget_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b> / @type</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1801,14 +2301,14 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_IntendedRecipients_IntendedRecipients_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_IntendedRecipients_IntendedRecipients_Target_id');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_QueryTarget_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_IntendedRecipients_IntendedRecipients_Target_id" style="display:block">
+                           <div id="annotations_QueryTarget_type" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Enterprise identifer of the the human recipient</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -1817,15 +2317,31 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      </tr>
                      <tr>
                         <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_IntendedRecipients_IntendedRecipients_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_IntendedRecipients_IntendedRecipients_Target_id');" class="control" /></div>
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_QueryTarget_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_IntendedRecipients_IntendedRecipients_Target_id" style="display:block">
+                           <div id="properties_QueryTarget_type" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_QueryTarget_type');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_QueryTarget_type" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#IntendedRecipients_Target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/Target</a></b></td>
+                                    <td class="firstColumn">Complex Type </td>
+                                    <td><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1834,15 +2350,15 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_IntendedRecipients_IntendedRecipients_Target_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_IntendedRecipients_IntendedRecipients_Target_id');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_QueryTarget_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_QueryTarget_type');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_IntendedRecipients_IntendedRecipients_Target_id" style="display:block">
+                           <div id="source_QueryTarget_type" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enterprise identifer of the the human recipient</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Example: &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -2047,7 +2563,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_statusCode"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @statusCode</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_status-code"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @status-code</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2066,10 +2582,10 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_Message_statusCode" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_statusCode');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_Message_status-code" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_status-code');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_Message_statusCode" style="display:block">
+                           <div id="usedBy_Message_status-code" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Complex Type </td>
@@ -2082,13 +2598,13 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_Message_statusCode" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_statusCode');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_Message_status-code" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_status-code');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_Message_statusCode" style="display:block">
+                           <div id="source_Message_status-code" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"statusCode"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"status-code"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -2109,7 +2625,7 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_statusCodeScheme"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @statusCodeScheme</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_status-code-scheme"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @status-code-scheme</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2128,10 +2644,10 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_Message_statusCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_statusCodeScheme');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_Message_status-code-scheme" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_status-code-scheme');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_Message_statusCodeScheme" style="display:block">
+                           <div id="usedBy_Message_status-code-scheme" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Complex Type </td>
@@ -2144,91 +2660,13 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_Message_statusCodeScheme" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_statusCodeScheme');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_Message_status-code-scheme" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_status-code-scheme');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_Message_statusCodeScheme" style="display:block">
+                           <div id="source_Message_status-code-scheme" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"statusCodeScheme"</span><span class="tEl">/&gt;</span></pre></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn"><b>Schema location</b></td>
-                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-            <td class="rt_lineRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_cornerBottomLeft"></td>
-            <td class="rt_lineBottom"></td>
-            <td class="rt_cornerBottomRight"></td>
-         </tr>
-      </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_id"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @id</span></div>
-      <table class="rt">
-         <tr>
-            <td class="rt_cornerTopLeft"></td>
-            <td class="rt_lineTop"></td>
-            <td class="rt_cornerTopRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_lineLeft"></td>
-            <td class="rt_content">
-               <table class="component">
-                  <tbody>
-                     <tr>
-                        <td class="firstColumn"><b>Namespace</b></td>
-                        <td>No namespace</td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_Message_id" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_Message_id');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="properties_Message_id" style="display:block">
-                              <table class="propertiesTable">
-                                 <tr>
-                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
-                                    <td><b>required</b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_Message_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_id');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="usedBy_Message_id" style="display:block">
-                              <table class="usedByTable">
-                                 <tr>
-                                    <td class="firstColumn">Complex Type </td>
-                                    <td><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_Message_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_id');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="source_Message_id" style="display:block">
-                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                 <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"status-code-scheme"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -2311,6 +2749,146 @@ var modelBoxes= new Array('model_IntendedRecipients_QueryTarget',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"published"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTimeStamp"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="Message_subject-of-care"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b> / @subject-of-care</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_Message_subject-of-care" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_Message_subject-of-care');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_Message_subject-of-care" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Complex Type </td>
+                                    <td><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_Message_subject-of-care" type="image" src="img/btM.gif" value="-" onclick="switchState('source_Message_subject-of-care');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_Message_subject-of-care" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"subject-of-care"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Schema location</b></td>
+                        <td>file:/Users/litlfred/pulsar_cats/alert-junk/alert.xsd</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="alert_msg-id"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b> / @msg-id</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_alert_msg-id" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_alert_msg-id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_alert_msg-id" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_alert_msg-id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_alert_msg-id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_alert_msg-id" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_alert_msg-id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_alert_msg-id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_alert_msg-id" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"msg-id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
