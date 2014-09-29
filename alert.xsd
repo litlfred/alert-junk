@@ -2,43 +2,32 @@
 <xs:schema targetNamespace="urn:openhie.org:alerting" elementFormDefault="qualified"
     xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns="urn:openhie.org:alerting">
+    <xs:complexType name="Target">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="contact-point"/>
+        </xs:sequence>
+        <xs:attribute name="id">
+            <xs:annotation>
+                <xs:documentation>Enterprise identifer of the the human recipient</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:anyAttribute/>
+    </xs:complexType>
+    <xs:complexType name="QueryTarget">
+        <xs:sequence>
+            <xs:any/>
+        </xs:sequence>
+        <xs:attribute name="type" use="required">
+            <xs:annotation>
+                <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:anyAttribute/>
+    </xs:complexType>
     <xs:complexType name="IntendedRecipients">
         <xs:choice maxOccurs="unbounded">
-            <xs:element name="QueryTarget">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:any/>
-                    </xs:sequence>
-                    <xs:attribute name="type" use="required">
-                        <xs:annotation>
-                            <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
-                        </xs:annotation>
-                    </xs:attribute>
-                    <xs:anyAttribute/>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="Target">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element maxOccurs="unbounded" name="contactPoint">
-                            <xs:annotation>
-                                <xs:documentation>Each target must have at least one valid contact point.  Example: text value of "+1(919)555-1212"</xs:documentation>
-                            </xs:annotation>
-                            <xs:complexType>
-                                <xs:attribute name="useCode"/>
-                                <xs:attribute name="useCodeScheme"/>
-                                <xs:anyAttribute/>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                    <xs:attribute name="id">
-                        <xs:annotation>
-                            <xs:documentation>Enterprise identifer of the the human recipient</xs:documentation>
-                        </xs:annotation>
-                    </xs:attribute>
-                    <xs:anyAttribute/>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="query-target" type="QueryTarget"> </xs:element>
+            <xs:element name="target" type="Target"> </xs:element>
         </xs:choice>
         <xs:anyAttribute/>
     </xs:complexType>
@@ -57,22 +46,23 @@
 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="statusCode"/>
-        <xs:attribute name="statusCodeScheme"/>
-        <xs:attribute name="id" use="required"/>
+        <xs:attribute name="status-code"/>
+        <xs:attribute name="status-code-scheme"/>
         <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
-        <xs:anyAttribute/>
+        <xs:attribute ref="xml:lang"/>
+        <xs:attribute name="subject-of-care"/>
     </xs:complexType>
-    <xs:element name="Alert">
+    <xs:element name="alert">
         <xs:complexType>
             <xs:sequence>
-                <xs:element maxOccurs="unbounded" name="IntendedRecipients"
-                    type="IntendedRecipients"/>
-                <xs:element maxOccurs="unbounded" name="Message" type="Message"/>
+                <xs:element name="intended-recipients" type="IntendedRecipients"/>
+                <xs:element name="message" type="Message"/>
                 <xs:sequence>
                     <xs:any/>
                 </xs:sequence>
             </xs:sequence>
+            <xs:attribute name="msg-id" use="required"/>
+            <xs:anyAttribute/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
