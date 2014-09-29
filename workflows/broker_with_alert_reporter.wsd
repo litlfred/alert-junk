@@ -9,7 +9,7 @@ Alert Broker->Alert Pub:ACK (SOAP)\nmaybe like "return status" below
 loop over oh:IntendedRecipients/oh:QueryTarget  
 Alert Broker->Human Reg: resolve recipients\nsend s:/Header\nnote: should allow for ability to cache\n/oh:IntenededRecipient/oh:TargetQuery/*
 
-Human Reg->Alert Broker:here  is what I was able to resolve oh:IntendedRecipiet to
+Human Reg->Alert Broker:here  is what I was able to resolve oh:IntendedRecipient to 
 
 end
 
