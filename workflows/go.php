@@ -1,3 +1,4 @@
+#!/opt/local/bin/php
 <?php
 
 function get_sequence_diagram($args) {
@@ -17,7 +18,29 @@ function get_sequence_diagram($args) {
 
   }
 
-foreach( glob('*.wsd') as  $file ) {
+
+var_dump($argv);
+if (count($argv) > 0) {
+    reset($argv);
+    $files = array_slice($argv,1);    
+    foreach ($files as $i=>&$file) {
+	$file = basename($file);
+	if (substr($file,-3) != 'wsd') {
+	    unset($files[$i]);
+	    continue;
+	} 
+	if ($file[0] == '.') {
+	    unset($files[$i]);
+	    continue;
+	}
+    }
+} else {
+    $files = glob('*.wsd');
+}
+
+var_dump($files);
+
+foreach( $files as  $file ) {
     $wsd = file_get_contents($file);    
     $img_url = get_sequence_diagram(
 	array(
