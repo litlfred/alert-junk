@@ -1,0 +1,32 @@
+title IntendedRecipients SOAP + AMQP
+
+Alert Pub->Alert Broker: Publish one or more messages in SOAP by specifying \n./s:Header/oh:IntendedRecpient and s:Body/oh:Message\n \noptionally set @statusCode and @statusCodeScheme to allow\n Alert Cons to receive only certain status messages
+
+
+Alert Broker->Alert Pub:ACK (SOAP)\nmaybe like "return status" below
+
+
+loop over oh:IntendedRecipients/oh:QueryTarget  
+Alert Broker->Human Reg: resolve recipients\nsend s:/Header\nnote: should allow for ability to cache\n/oh:IntenededRecipient/oh:TargetQuery/*
+
+Human Reg->Alert Broker:here  is what I was able to resolve oh:IntendedRecipiet to
+
+end
+
+
+Alert Cons->Alert Broker: HTTP GET Give me any messages since $timestamp or page $page\nand optional status $statusCode and $statusCodeScheme
+
+
+Alert Broker->Alert Cons: HTTP GET return ATOM feed of msgs
+note over Alert Broker,Alert Cons:\nnote atom:content has oh:Alert:\nshould iit be timestamped when received by Alert Broder?\n\n-@type? which is mime-type\n@src? which is IRI to fetch content\na  that way feed does need to hold PHI\n-atom:id is msg id\n-extensionPoint holds ./s:Header/ohie:*\n  \nCould also be ATOM feed of FHIR DTSU alerts?\nhere the content is\nbase-64 encoding of an oh:Alert
+
+
+opt RENDER CONTENT AND INTERACT WITH A HUMAN
+Alert Cons->Alert Cons: Fetch content from src@Series of Tubes 
+Alert Cons->Alert Cons: Render 
+
+
+Alert Cons->Human: deliver content
+Alert Cons->Alert Broker: ACK\nHTTP POST
+Alert Broker->Alert Broker: remove msg from queue\nnext request for ATOM feed will have changed atom:updated\n \nAre we ACKing the msg or the recipient?\nif the recipient, maybe we need the Alert Reporter actor 
+end
