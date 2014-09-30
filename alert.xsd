@@ -4,7 +4,14 @@
     xmlns="urn:openhie.org:alerting">
     <xs:complexType name="Target">
         <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="contact-point"/>
+            <xs:element maxOccurs="unbounded" name="contact-point">
+                <xs:complexType>
+                    <xs:attribute name="use-code"/>
+                    <xs:attribute name="use-code-scheme"/>
+                    <xs:attribute name="value"/>
+                    <xs:anyAttribute/>
+                </xs:complexType>
+            </xs:element>
         </xs:sequence>
         <xs:attribute name="id">
             <xs:annotation>
@@ -52,17 +59,17 @@
         <xs:attribute ref="xml:lang"/>
         <xs:attribute name="subject-of-care"/>
     </xs:complexType>
-    <xs:element name="alert">
-        <xs:complexType>
+    <xs:complexType name="Alert">
+        <xs:sequence>
+            <xs:element name="intended-recipients" type="IntendedRecipients"/>
+            <xs:element name="message" type="Message"/>
             <xs:sequence>
-                <xs:element name="intended-recipients" type="IntendedRecipients"/>
-                <xs:element name="message" type="Message"/>
-                <xs:sequence>
-                    <xs:any/>
-                </xs:sequence>
+                <xs:any/>
             </xs:sequence>
-            <xs:attribute name="msg-id" use="required"/>
-            <xs:anyAttribute/>
-        </xs:complexType>
-    </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" use="required"/>
+        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
+        <xs:anyAttribute/>
+    </xs:complexType>
+    <xs:element name="alert" type="Alert"> </xs:element>
 </xs:schema>
