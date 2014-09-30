@@ -30,7 +30,7 @@ function get_sequence_diagram($args) {
 
 
 var_dump($argv);
-if (count($argv) > 0) {
+if (count($argv) > 1) {
     reset($argv);
     $files = array_slice($argv,1);    
     foreach ($files as $i=>&$file) {
@@ -44,11 +44,11 @@ if (count($argv) > 0) {
 	    continue;
 	}
     }
+    unset($file);
 } else {
     $files = glob('*.wsd');
 }
 
-var_dump($files);
 
 foreach( $files as  $file ) {
     $wsd = file_get_contents($file);    

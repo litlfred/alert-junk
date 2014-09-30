@@ -1,27 +1,34 @@
 title IntendedRecipients SOAP + AMQP
 
-Alert Pub->Alert Broker: Publish one or more messages in SOAP by specifying \n./s:Header/oh:IntendedRecpient and s:Body/oh:Message\n \noptionally set @statusCode and @statusCodeScheme to allow\n Alert Cons to receive only certain status messages
+Alert Pub->Alert Broker: Publish message in SOAP by specifying \n./s:Header/oh:intended-recpient and s:Body/oh:message\n \noptionally set @statusCode and @statusCodeScheme to allow\n Alert Cons to receive only certain status alerts
 
 
-Alert Broker->Alert Pub:ACK (SOAP)\nmaybe like "return status" below
+Alert Broker->Alert Pub:ACK (SOAP)
 
 
-loop over oh:IntendedRecipients/oh:QueryTarget  
-Alert Broker->Human Reg: resolve recipients\nsend s:/Header\nnote: should allow for ability to cache\n/oh:IntenededRecipient/oh:TargetQuery/*
+loop over oh:intended-recipient/oh:query-target  
+Alert Broker->Human Reg: resolve recipients\nsend s:/Header\nnote: should allow for ability to cache\n/oh:inteneded-recipient/oh:target-query/*
 
-Human Reg->Alert Broker:here  is what I was able to resolve oh:IntendedRecipient to 
+Human Reg->Alert Broker:here  is what I was able to resolve oh:intended-recipient to 
+Alert Broker->Alert Broker: put alert in queue with timestamp
 
 end
 
 
-Alert Cons->Alert Broker: HTTP GET Give me any messages since $timestamp or page $page\nand optional status $statusCode and $statusCodeScheme
+Alert Cons->Alert Broker: HTTP GET\nGive me any alerts published since $timestamp on page $page\nand optional status $statusCode and $statusCodeScheme
 
 
-Alert Broker->Alert Cons: HTTP GET return ATOM feed of msgs
-note over Alert Broker,Alert Cons:\nnote atom:content has oh:Alert:\nshould iit be timestamped when received by Alert Broder?\n\n-@type? which is mime-type\n@src? which is IRI to fetch content\na  that way feed does need to hold PHI\n-atom:id is msg id\n-extensionPoint holds ./s:Header/ohie:*\n  \nCould also be ATOM feed of FHIR DTSU alerts?\nhere the content is\nbase-64 encoding of an oh:Alert
+Alert Broker->Alert Cons: HTTP reposnse\n return ATOM feed of oh:alert
+note over Alert Cons:Can avoid carrying PHI by making use of oh:message/@src
 
 
-opt RENDER CONTENT AND INTERACT WITH A HUMAN
+
+loop OVER alert id.  RENDER CONTENT AND INTERACT WITH A HUMAN
+
+Alert Cons->Alert Broker: ACK on alert id\nHTTP POST
+Alert Broker->Alert Broker: remove alert from queue
+note over Alert Broker: next request for ATOM feed will have changed atom:updated\nQuestion: what are ACKing?\n-that the AC took responsibility to deliver the message 
+
 Alert Cons->Alert Cons: Fetch content from src@Series of Tubes 
 Alert Cons->Alert Cons: Render 
 
@@ -29,26 +36,22 @@ Alert Cons->Alert Cons: Render
 Alert Cons->Human: deliver content
 
 
-Alert Cons->Alert Broker: ACK on msgid\nHTTP POST
-Alert Broker->Alert Broker: remove msg from queue\nnext request for ATOM feed will have changed atom:updated
 
 
 
 opt RECORD OUTCOME OF HUMAN INTERACTION
 Human->Alert Cons:Register action\n (e.g. SDC)
-note over Alert Cons: human inter-action may trigger change\nin status\nHTTP POST \nsend oh:AlertReceipt with $id and $status \n \n JSON Repn?
+note over Alert Cons: human interaction may trigger change in status
 
 
 
-Alert Cons->Alert Reporter: delivered/set @responseCode in @responseCodeScheme\nfora given msg id\nHTTP POST\nATOM PUBLISH\ncontent  oh:AlertReceipt
+Alert Cons->Alert Reporter: HTTP POST\nATOM PUBLISH?\ncontent  oh:alert-receipt
+
+note over Alert Cons: response code could:\n-indicate "Yes, I saw someone with Ebola symptoms"\n-support ICP workflows\n\nsets @responseCode and @responseCodeScheme\n@timestamp and geo data
+
+Alert Pub->Alert Reporter: check status of  $alert-id\n SOAP
+
+Alert Reporter->Alert Pub: return status\nSOAP \ncontains s:Body/oh:alert-receipt
 end
-note over Alert Cons: response code could indicate\n "Yes, I saw someone with Ebola symptoms"
-
-opt Determine msg status (perhaps over time) -- to support ICP workflows
-Alert Pub->Alert Reporter: check status of  $msgid\n \nmaybe OpenSearch with time and GEO extension\nsearch term is responseCode
-
-Alert Reporter->Alert Pub: return status\nSOAP or ATOM OR AMQP\n \ncontains s:Body/oh:AlertReceipt\n OR atom:content/oh:AlertReceipt\n 
 end
 
-
-end
