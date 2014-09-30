@@ -4,13 +4,14 @@
     xmlns="urn:openhie.org:alerting">
     <xs:complexType name="Target">
         <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="contactPoint">
+            <xs:element maxOccurs="unbounded" name="contact-point">
                 <xs:annotation>
-                    <xs:documentation>Each target must have at least one valid contact point.  Example: text value of "+1(919)555-1212"</xs:documentation>
+                    <xs:documentation>Each target must have at least one valid contact point.  Example: "+1(919)555-1212"</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
-                    <xs:attribute name="useCode"/>
-                    <xs:attribute name="useCodeScheme"/>
+                    <xs:attribute name="use-code"/>
+                    <xs:attribute name="use-code-scheme"/>
+                    <xs:attribute name="value"/>
                     <xs:anyAttribute/>
                 </xs:complexType>
             </xs:element>
@@ -49,7 +50,7 @@
                 <xs:documentation>mime-type</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="src">
+        <xs:attribute name="src" type="xs:anyURI">
             <xs:annotation>
                 <xs:documentation>Optional attribute.  If present and non-empty then there can be nothing under Message element.  Otherwise content is under Message element. Similar to atom:content. If there is content may include PHI triggering audit requirements.
 </xs:documentation>
@@ -62,34 +63,29 @@
         <xs:attribute name="subject-of-care"/>
         <xs:anyAttribute/>
     </xs:complexType>
-    <xs:element name="alert">
-        <xs:complexType>
+    <xs:complexType name="Alert">
+        <xs:sequence>
+            <xs:element name="intended-recipients" type="IntendedRecipients"/>
+            <xs:element name="message" type="Message"/>
             <xs:sequence>
-                <xs:element name="intended-recipients" type="IntendedRecipients"/>
-                <xs:element name="message" type="Message"/>
-                <xs:sequence>
-                    <xs:any/>
-                </xs:sequence>
+                <xs:any/>
             </xs:sequence>
-            <xs:attribute name="msg-id"/>
-            <xs:anyAttribute/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="alert-receipt">
-        <xs:complexType>
-            <xs:attribute name="recipient-id" use="required"/>
-            <xs:attribute name="msg-id" use="required"/>
-            <xs:attribute name="timestamp" use="required">
-                <xs:annotation>
-                    <xs:documentation>ISO 8601 UTC date time</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
-            <xs:attribute name="response-code"/>
-            <xs:attribute name="response-code-scheme"/>
-            <xs:attribute name="response-code-uri" type="xs:anyURI"/>
-            <xs:attribute name="latitude"/>
-            <xs:attribute name="longitude"/>
-            <xs:anyAttribute/>
-        </xs:complexType>
-    </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" use="required"/>
+        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
+        <xs:anyAttribute/>
+    </xs:complexType>
+    <xs:element name="alert" type="Alert"> </xs:element>
+    <xs:complexType name="AlertReceipt">
+        <xs:attribute name="alert-id" use="required"/>
+        <xs:attribute name="recipient-id" use="required"/>
+        <xs:attribute name="response-code"/>
+        <xs:attribute name="response-code-scheme"/>
+        <xs:attribute name="response-code-uri" type="xs:anyURI"/>
+        <xs:attribute name="latitude"/>
+        <xs:attribute name="longitude"/>
+        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
+        <xs:anyAttribute/>
+    </xs:complexType>
+    <xs:element name="alert-receipt" type="AlertReceipt"> </xs:element>
 </xs:schema>
