@@ -12,9 +12,19 @@ function get_sequence_diagram($args) {
     curl_setopt($ch, CURLOPT_POSTFIELDS, implode("&", $params));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($ch);
-    curl_close($ch);
     $json = json_decode($response);
-    return "http://www.websequencediagrams.com/" . $json->img;
+    if (!$json) {
+	echo "error:no connection?\n"; 
+	$http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	echo "errorno:" .  curl_errno($ch) ."\n";
+	echo curl_error($ch);
+	    //print_r($args);
+	curl_close($ch);
+	return false;
+    } else  {
+	curl_close($ch);
+	return "http://www.websequencediagrams.com/" . $json->img;
+    }
 
   }
 
@@ -49,7 +59,9 @@ foreach( $files as  $file ) {
 	    "style" => "modern-blue",
 	    "format" => "png"
 	    ));
-    $img = file_get_contents($img_url);
-    $img_file = basename($file,'.wsd') . '.png';
-    file_put_contents($img_file,$img);
+    if ($img_url) {
+	$img = file_get_contents($img_url);
+	$img_file = basename($file,'.wsd') . '.png';
+	file_put_contents($img_file,$img);
+    }
   }

@@ -40,7 +40,7 @@ note over Alert Cons: human inter-action may trigger change\nin status\nHTTP POS
 
 
 
-Alert Cons->Alert Reporter: delivered/set @responseCode in @responseCodeScheme\nfora given msg id\nHTTP POST\noh:AlertReceipt
+Alert Cons->Alert Reporter: delivered/set @responseCode in @responseCodeScheme\nfora given msg id\nHTTP POST\nATOM PUBLISH\ncontent  oh:AlertReceipt
 end
 note over Alert Cons: response code could indicate\n "Yes, I saw someone with Ebola symptoms"
 
