@@ -3,24 +3,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Schema documentation for alert.xsd</title>
+      <title>Schema documentation for alert-receipt.xsd</title>
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
-        var propertiesBoxes= new Array('properties_alert.xsd', 
+        var propertiesBoxes= new Array('properties_alert-receipt.xsd', 
 				'properties_Target_contact-point', 
 				'properties_IntendedRecipients_query-target', 
 				'properties_IntendedRecipients_target', 
+				'properties_Alert_intended-recipients', 
+				'properties_Alert_message', 
 				'properties_alert', 
-				'properties_alert_intended-recipients', 
-				'properties_alert_message', 
+				'properties_alert-receipt', 
 				'properties_QueryTarget_type', 
 				'properties_Message_content-type', 
+				'properties_Message_src', 
 				'properties_Message_published', 
-				'properties_alert_msg-id');
+				'properties_Alert_id', 
+				'properties_Alert_timestamp', 
+				'properties_AlertReceipt_alert-id', 
+				'properties_AlertReceipt_recipient-id', 
+				'properties_AlertReceipt_response-code-uri', 
+				'properties_AlertReceipt_timestamp');
 var usedByBoxes= new Array('usedBy_Target', 
 				'usedBy_QueryTarget', 
 				'usedBy_IntendedRecipients', 
 				'usedBy_Message', 
+				'usedBy_Alert', 
+				'usedBy_AlertReceipt', 
+				'usedBy_Target_Target_contact-point_use-code', 
+				'usedBy_Target_Target_contact-point_use-code-scheme', 
+				'usedBy_Target_Target_contact-point_value', 
 				'usedBy_Target_id', 
 				'usedBy_QueryTarget_type', 
 				'usedBy_Message_content-type', 
@@ -29,17 +41,32 @@ var usedByBoxes= new Array('usedBy_Target',
 				'usedBy_Message_status-code-scheme', 
 				'usedBy_Message_published', 
 				'usedBy_Message_subject-of-care', 
-				'usedBy_alert_msg-id');
+				'usedBy_Alert_id', 
+				'usedBy_Alert_timestamp', 
+				'usedBy_AlertReceipt_alert-id', 
+				'usedBy_AlertReceipt_recipient-id', 
+				'usedBy_AlertReceipt_response-code', 
+				'usedBy_AlertReceipt_response-code-scheme', 
+				'usedBy_AlertReceipt_response-code-uri', 
+				'usedBy_AlertReceipt_latitude', 
+				'usedBy_AlertReceipt_longitude', 
+				'usedBy_AlertReceipt_timestamp');
 var sourceBoxes= new Array('source_Target_contact-point', 
 				'source_IntendedRecipients_query-target', 
 				'source_IntendedRecipients_target', 
+				'source_Alert_intended-recipients', 
+				'source_Alert_message', 
 				'source_alert', 
-				'source_alert_intended-recipients', 
-				'source_alert_message', 
+				'source_alert-receipt', 
 				'source_Target', 
 				'source_QueryTarget', 
 				'source_IntendedRecipients', 
 				'source_Message', 
+				'source_Alert', 
+				'source_AlertReceipt', 
+				'source_Target_Target_contact-point_use-code', 
+				'source_Target_Target_contact-point_use-code-scheme', 
+				'source_Target_Target_contact-point_value', 
 				'source_Target_id', 
 				'source_QueryTarget_type', 
 				'source_Message_content-type', 
@@ -48,42 +75,60 @@ var sourceBoxes= new Array('source_Target_contact-point',
 				'source_Message_status-code-scheme', 
 				'source_Message_published', 
 				'source_Message_subject-of-care', 
-				'source_alert_msg-id');
+				'source_Alert_id', 
+				'source_Alert_timestamp', 
+				'source_AlertReceipt_alert-id', 
+				'source_AlertReceipt_recipient-id', 
+				'source_AlertReceipt_response-code', 
+				'source_AlertReceipt_response-code-scheme', 
+				'source_AlertReceipt_response-code-uri', 
+				'source_AlertReceipt_latitude', 
+				'source_AlertReceipt_longitude', 
+				'source_AlertReceipt_timestamp');
 var instanceBoxes= new Array('instance_IntendedRecipients_target', 
-				'instance_alert', 
-				'instance_alert_intended-recipients');
+				'instance_Alert_intended-recipients', 
+				'instance_alert');
 var diagramBoxes= new Array('diagram_Target_contact-point', 
 				'diagram_IntendedRecipients_query-target', 
 				'diagram_IntendedRecipients_target', 
+				'diagram_Alert_intended-recipients', 
+				'diagram_Alert_message', 
 				'diagram_alert', 
-				'diagram_alert_intended-recipients', 
-				'diagram_alert_message', 
+				'diagram_alert-receipt', 
 				'diagram_Target', 
 				'diagram_QueryTarget', 
 				'diagram_IntendedRecipients', 
-				'diagram_Message');
-var annotationBoxes= new Array('annotations_Target_id', 
+				'diagram_Message', 
+				'diagram_Alert', 
+				'diagram_AlertReceipt');
+var annotationBoxes= new Array('annotations_Target_contact-point', 
+				'annotations_Target_id', 
 				'annotations_QueryTarget_type', 
 				'annotations_Message_content-type', 
 				'annotations_Message_src');
-var attributesBoxes= new Array('attributes_IntendedRecipients_query-target', 
+var attributesBoxes= new Array('attributes_Target_contact-point', 
+				'attributes_IntendedRecipients_query-target', 
 				'attributes_IntendedRecipients_target', 
+				'attributes_Alert_intended-recipients', 
+				'attributes_Alert_message', 
 				'attributes_alert', 
-				'attributes_alert_intended-recipients', 
-				'attributes_alert_message', 
+				'attributes_alert-receipt', 
 				'attributes_Target', 
 				'attributes_QueryTarget', 
 				'attributes_IntendedRecipients', 
-				'attributes_Message');
+				'attributes_Message', 
+				'attributes_Alert', 
+				'attributes_AlertReceipt');
 var modelBoxes= new Array('model_IntendedRecipients_query-target', 
 				'model_IntendedRecipients_target', 
+				'model_Alert_intended-recipients', 
+				'model_Alert_message', 
 				'model_alert', 
-				'model_alert_intended-recipients', 
-				'model_alert_message', 
 				'model_Target', 
 				'model_QueryTarget', 
 				'model_IntendedRecipients', 
-				'model_Message');
+				'model_Message', 
+				'model_Alert');
 
       
         var button_prefix = 'button_';
@@ -352,12 +397,13 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#Alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">Alert/intended-recipients</a></b></div>
+                                                <div><b><a href="index.html#Alert_message" target="_self" title="urn:openhie.org:alerting">Alert/message</a></b></div>
                                                 <div><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></div>
                                                 <div><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></div>
                                                 <div><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">Target/contact-point</a></b></div>
                                                 <div><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></div>
-                                                <div><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></div>
-                                                <div><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></div>
+                                                <div><b><a href="index.html#alert-receipt" target="_self" title="urn:openhie.org:alerting">alert-receipt</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -395,6 +441,8 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#Alert" target="_self" title="urn:openhie.org:alerting">Alert</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt" target="_self" title="urn:openhie.org:alerting">AlertReceipt</a></b></div>
                                                 <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                                 <div><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></div>
@@ -442,6 +490,16 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#Alert_id" target="_self" title="No namespace">Alert/@id</a></b></div>
+                                                <div><b><a href="index.html#Alert_timestamp" target="_self" title="No namespace">Alert/@timestamp</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_alert-id" target="_self" title="No namespace">AlertReceipt/@alert-id</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_latitude" target="_self" title="No namespace">AlertReceipt/@latitude</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_longitude" target="_self" title="No namespace">AlertReceipt/@longitude</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_recipient-id" target="_self" title="No namespace">AlertReceipt/@recipient-id</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_response-code" target="_self" title="No namespace">AlertReceipt/@response-code</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_response-code-scheme" target="_self" title="No namespace">AlertReceipt/@response-code-scheme</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_response-code-uri" target="_self" title="No namespace">AlertReceipt/@response-code-uri</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_timestamp" target="_self" title="No namespace">AlertReceipt/@timestamp</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                                 <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
@@ -450,7 +508,9 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                                 <div><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">Message/@subject-of-care</a></b></div>
                                                 <div><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">QueryTarget/@type</a></b></div>
                                                 <div><b><a href="index.html#Target_id" target="_self" title="No namespace">Target/@id</a></b></div>
-                                                <div><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">alert/@msg-id</a></b></div>
+                                                <div><b><a href="index.html#Target_Target_contact-point_use-code" target="_self" title="No namespace">Target/contact-point/@use-code</a></b></div>
+                                                <div><b><a href="index.html#Target_Target_contact-point_use-code-scheme" target="_self" title="No namespace">Target/contact-point/@use-code-scheme</a></b></div>
+                                                <div><b><a href="index.html#Target_Target_contact-point_value" target="_self" title="No namespace">Target/contact-point/@value</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -495,12 +555,13 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#Alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">Alert/intended-recipients</a></b></div>
+                                          <div><b><a href="index.html#Alert_message" target="_self" title="urn:openhie.org:alerting">Alert/message</a></b></div>
                                           <div><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></div>
                                           <div><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></div>
                                           <div><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">Target/contact-point</a></b></div>
                                           <div><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></div>
-                                          <div><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></div>
-                                          <div><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></div>
+                                          <div><b><a href="index.html#alert-receipt" target="_self" title="urn:openhie.org:alerting">alert-receipt</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -538,6 +599,8 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Complex_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#Alert" target="_self" title="urn:openhie.org:alerting">Alert</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt" target="_self" title="urn:openhie.org:alerting">AlertReceipt</a></b></div>
                                           <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                           <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                           <div><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></div>
@@ -579,6 +642,16 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#Alert_id" target="_self" title="No namespace">Alert/@id</a></b></div>
+                                          <div><b><a href="index.html#Alert_timestamp" target="_self" title="No namespace">Alert/@timestamp</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_alert-id" target="_self" title="No namespace">AlertReceipt/@alert-id</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_latitude" target="_self" title="No namespace">AlertReceipt/@latitude</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_longitude" target="_self" title="No namespace">AlertReceipt/@longitude</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_recipient-id" target="_self" title="No namespace">AlertReceipt/@recipient-id</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_response-code" target="_self" title="No namespace">AlertReceipt/@response-code</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_response-code-scheme" target="_self" title="No namespace">AlertReceipt/@response-code-scheme</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_response-code-uri" target="_self" title="No namespace">AlertReceipt/@response-code-uri</a></b></div>
+                                          <div><b><a href="index.html#AlertReceipt_timestamp" target="_self" title="No namespace">AlertReceipt/@timestamp</a></b></div>
                                           <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                           <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                           <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
@@ -587,7 +660,9 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                           <div><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">Message/@subject-of-care</a></b></div>
                                           <div><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">QueryTarget/@type</a></b></div>
                                           <div><b><a href="index.html#Target_id" target="_self" title="No namespace">Target/@id</a></b></div>
-                                          <div><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">alert/@msg-id</a></b></div>
+                                          <div><b><a href="index.html#Target_Target_contact-point_use-code" target="_self" title="No namespace">Target/contact-point/@use-code</a></b></div>
+                                          <div><b><a href="index.html#Target_Target_contact-point_use-code-scheme" target="_self" title="No namespace">Target/contact-point/@use-code-scheme</a></b></div>
+                                          <div><b><a href="index.html#Target_Target_contact-point_value" target="_self" title="No namespace">Target/contact-point/@value</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -609,8 +684,8 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
          <div class="level1" id="toc_group_by_location" style="display:none">
             <div>
                <div class="level2">
-                  <p><input id="button_gr_alert.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert.xsd');" class="control" /><span class="indexGroupTitle">alert.xsd</span></p>
-                  <div id="gr_alert.xsd" style="display:block">
+                  <p><input id="button_gr_alert-receipt.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert-receipt.xsd');" class="control" /><span class="indexGroupTitle">alert-receipt.xsd</span></p>
+                  <div id="gr_alert-receipt.xsd" style="display:block">
                      <div class="horizontalLayout">
                         <table class="rt">
                            <tr>
@@ -624,7 +699,7 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_alert.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_alert-receipt.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert-receipt.xsdElement');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Elements</div>
                                           </td>
@@ -632,13 +707,14 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_alert.xsdElement" class="componentGroup" style="display:block">
+                                             <div id="gr_alert-receipt.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#Alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">Alert/intended-recipients</a></b></div>
+                                                <div><b><a href="index.html#Alert_message" target="_self" title="urn:openhie.org:alerting">Alert/message</a></b></div>
                                                 <div><b><a href="index.html#IntendedRecipients_query-target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/query-target</a></b></div>
                                                 <div><b><a href="index.html#IntendedRecipients_target" target="_self" title="urn:openhie.org:alerting">IntendedRecipients/target</a></b></div>
                                                 <div><b><a href="index.html#Target_contact-point" target="_self" title="urn:openhie.org:alerting">Target/contact-point</a></b></div>
                                                 <div><b><a href="index.html#alert" target="_self" title="urn:openhie.org:alerting">alert</a></b></div>
-                                                <div><b><a href="index.html#alert_intended-recipients" target="_self" title="urn:openhie.org:alerting">alert/intended-recipients</a></b></div>
-                                                <div><b><a href="index.html#alert_message" target="_self" title="urn:openhie.org:alerting">alert/message</a></b></div>
+                                                <div><b><a href="index.html#alert-receipt" target="_self" title="urn:openhie.org:alerting">alert-receipt</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -667,7 +743,7 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_alert.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert.xsdComplex_Type');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_alert-receipt.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert-receipt.xsdComplex_Type');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Complex Types</div>
                                           </td>
@@ -675,7 +751,9 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_alert.xsdComplex_Type" class="componentGroup" style="display:block">
+                                             <div id="gr_alert-receipt.xsdComplex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#Alert" target="_self" title="urn:openhie.org:alerting">Alert</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt" target="_self" title="urn:openhie.org:alerting">AlertReceipt</a></b></div>
                                                 <div><b><a href="index.html#IntendedRecipients" target="_self" title="urn:openhie.org:alerting">IntendedRecipients</a></b></div>
                                                 <div><b><a href="index.html#Message" target="_self" title="urn:openhie.org:alerting">Message</a></b></div>
                                                 <div><b><a href="index.html#QueryTarget" target="_self" title="urn:openhie.org:alerting">QueryTarget</a></b></div>
@@ -708,7 +786,7 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_alert.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert.xsdAttribute');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_alert-receipt.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_alert-receipt.xsdAttribute');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attributes</div>
                                           </td>
@@ -716,7 +794,17 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_alert.xsdAttribute" class="componentGroup" style="display:block">
+                                             <div id="gr_alert-receipt.xsdAttribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#Alert_id" target="_self" title="No namespace">Alert/@id</a></b></div>
+                                                <div><b><a href="index.html#Alert_timestamp" target="_self" title="No namespace">Alert/@timestamp</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_alert-id" target="_self" title="No namespace">AlertReceipt/@alert-id</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_latitude" target="_self" title="No namespace">AlertReceipt/@latitude</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_longitude" target="_self" title="No namespace">AlertReceipt/@longitude</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_recipient-id" target="_self" title="No namespace">AlertReceipt/@recipient-id</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_response-code" target="_self" title="No namespace">AlertReceipt/@response-code</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_response-code-scheme" target="_self" title="No namespace">AlertReceipt/@response-code-scheme</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_response-code-uri" target="_self" title="No namespace">AlertReceipt/@response-code-uri</a></b></div>
+                                                <div><b><a href="index.html#AlertReceipt_timestamp" target="_self" title="No namespace">AlertReceipt/@timestamp</a></b></div>
                                                 <div><b><a href="index.html#Message_content-type" target="_self" title="No namespace">Message/@content-type</a></b></div>
                                                 <div><b><a href="index.html#Message_published" target="_self" title="No namespace">Message/@published</a></b></div>
                                                 <div><b><a href="index.html#Message_src" target="_self" title="No namespace">Message/@src</a></b></div>
@@ -725,7 +813,9 @@ var modelBoxes= new Array('model_IntendedRecipients_query-target',
                                                 <div><b><a href="index.html#Message_subject-of-care" target="_self" title="No namespace">Message/@subject-of-care</a></b></div>
                                                 <div><b><a href="index.html#QueryTarget_type" target="_self" title="No namespace">QueryTarget/@type</a></b></div>
                                                 <div><b><a href="index.html#Target_id" target="_self" title="No namespace">Target/@id</a></b></div>
-                                                <div><b><a href="index.html#alert_msg-id" target="_self" title="No namespace">alert/@msg-id</a></b></div>
+                                                <div><b><a href="index.html#Target_Target_contact-point_use-code" target="_self" title="No namespace">Target/contact-point/@use-code</a></b></div>
+                                                <div><b><a href="index.html#Target_Target_contact-point_use-code-scheme" target="_self" title="No namespace">Target/contact-point/@use-code-scheme</a></b></div>
+                                                <div><b><a href="index.html#Target_Target_contact-point_value" target="_self" title="No namespace">Target/contact-point/@value</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
