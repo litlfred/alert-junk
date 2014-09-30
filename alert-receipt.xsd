@@ -31,13 +31,12 @@
                 <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="newAttribute"/>
         <xs:anyAttribute/>
     </xs:complexType>
     <xs:complexType name="IntendedRecipients">
         <xs:choice maxOccurs="unbounded">
-            <xs:element name="QueryTarget" type="QueryTarget"> </xs:element>
-            <xs:element name="Target" type="Target"> </xs:element>
+            <xs:element name="query-target" type="QueryTarget"> </xs:element>
+            <xs:element name="target" type="Target"> </xs:element>
         </xs:choice>
         <xs:anyAttribute/>
     </xs:complexType>
@@ -56,45 +55,38 @@
 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="statusCode"/>
-        <xs:attribute name="statusCodeScheme"/>
-        <xs:attribute name="id" use="required">
-            <xs:annotation>
-                <xs:documentation>Should be globally unique ID for referencing this message.</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
+        <xs:attribute name="status-code"/>
+        <xs:attribute name="status-code-scheme"/>
         <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
         <xs:attribute ref="xml:lang"/>
-        <xs:attribute name="encryption"/>
+        <xs:attribute name="subject-of-care"/>
         <xs:anyAttribute/>
     </xs:complexType>
-    <xs:element name="Alert">
+    <xs:element name="alert">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="IntendedRecipients" type="IntendedRecipients"/>
-                <xs:element name="Message" type="Message"/>
+                <xs:element name="intended-recipients" type="IntendedRecipients"/>
+                <xs:element name="message" type="Message"/>
                 <xs:sequence>
                     <xs:any/>
                 </xs:sequence>
             </xs:sequence>
-            <xs:attribute name="timestamp">
-                <xs:annotation>
-                    <xs:documentation>ISO 8601 UTC date time</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
+            <xs:attribute name="msg-id"/>
+            <xs:anyAttribute/>
         </xs:complexType>
     </xs:element>
-    <xs:element name="AlertReceipt">
+    <xs:element name="alert-receipt">
         <xs:complexType>
-            <xs:attribute name="recipientID" use="required"/>
-            <xs:attribute name="msgID" use="required"/>
+            <xs:attribute name="recipient-id" use="required"/>
+            <xs:attribute name="msg-id" use="required"/>
             <xs:attribute name="timestamp" use="required">
                 <xs:annotation>
                     <xs:documentation>ISO 8601 UTC date time</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="responseCode"/>
-            <xs:attribute name="responseCodeScheme"/>
+            <xs:attribute name="response-code"/>
+            <xs:attribute name="response-code-scheme"/>
+            <xs:attribute name="response-code-uri" type="xs:anyURI"/>
             <xs:attribute name="latitude"/>
             <xs:attribute name="longitude"/>
             <xs:anyAttribute/>
