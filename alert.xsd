@@ -40,7 +40,7 @@
                 <xs:documentation>mime-type</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="src">
+        <xs:attribute name="src" type="xs:anyURI">
             <xs:annotation>
                 <xs:documentation>Optional attribute.  If present and non-empty then there can be nothing under Message element.  Otherwise content is under Message element. Similar to atom:content. If there is content may include PHI triggering audit requirements.
 </xs:documentation>
