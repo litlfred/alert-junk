@@ -1,0 +1,30 @@
+<oh:alert
+  xmlns:oh="urn:openhie.org:alerting"
+  id='urn:uuid:80b60040-4729-11e4-916c-0800200c9a66'
+  timestamp='2010-11-12T16:14:15Z'
+  >
+  <oh:intended-recipient>
+    <oh:query-target type="urn:ihe:iti:csd:2014:stored-function:facility-search">
+      <csd:requestParams xmlns:csd="urn:ihe:iti:csd:2013">
+      <csd:codedType code="OPC" codingSchema="XXXXXX" />
+      <csd:address>
+        <csd:addressLine component="city">Chapel Hill</csd:addressLine>
+      </csd:address>
+      </csd:requestParams>
+    </oh:query-target>
+    <oh:target id='urn:ecid:1234'>
+      <oh:contact-point use-code='CELL' use-code-scheme='http://localhost/EXAMPLE' value='+19195551212'/>
+    </oh:target>
+    <oh:target id='urn:ecid:12345'>
+      <oh:contact-point use-code='CELL' use-code-scheme='http://localhost/EXAMPLE' value='+19195551212'/>
+    </oh:target>
+
+  </oh:intended-recipient>
+  <oh:message 
+      published='2010-11-12T13:14:15Z'
+      status-code='Prioirity-Orange'  
+      status-code-scheme='CAPS-Example'	
+      content-type='text/plan; charset=utf-8'
+      xml:lang='en_US'
+      >Attack of nuclear powered dinosaurs! Report to your health facility</oh:message>
+</oh:alert>

@@ -1,0 +1,35 @@
+<soap:Envelope 
+  xmlns:soap="http://www.w3.org/2003/05/soap-envelope" 
+  xmlns:oh="urn:openhie.org:alerting"
+  xmlns:wsa="http://www.w3.org/2005/08/addressing"
+  >
+  <soap:Header>
+    <wsa:messageID><!-- message ID of alert receipt.--></wsa:messageID>
+    <wsa:RelatesTo RelationshipType="http://www.w3.org/2005/08/addressing/reply"><!-- message ID from APub?--></wsa:RelatesTo>
+    <!-- message is routed based on the soap:header/was:replyTo from the alert publisher-->
+    <!-- -->
+    <wsa:Action soap:mustUnderstand="1" >urn:openhie.org:alerting:2014:Message</wsa:Action>
+    <wsa:MessageID>urn:uuid:2c9597f0-4729-11e4-916c-0800200c9a66</wsa:MessageID> <!-- does this duplicate the oh:Message@id ?   -->
+    <wsa:ReplyTo soap:mustUnderstand="1">
+      <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address> 
+    </wsa:ReplyTo>
+    <wsa:To soap:mustUnderstand="1">http://host/alert-receipt</wsa:To>
+
+    <wsa:Action>http://host/publish-receipt</wsa:Action>
+
+
+  </soap:Header>
+  <soap:Body>
+    <oh:alert-receipt
+	alert-id='2c9597f0-4729-11e4-916c-0800200c9a66'
+	recipient-id='2c9597f0-4729-11e4-916c-0800200c9a68'
+	timestamp='2010-11-12T13:14:15Z'
+	response-code='Prioirity-Orange'  
+	response-code-scheme='CAPS-Example'	
+	response-uri='http://localhost/Desktop/selfie.png'
+	latitude='0.00'
+	longitude='0.00'
+	/>
+  </soap:Body>
+
+</soap:Envelope>

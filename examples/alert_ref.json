@@ -1,0 +1,60 @@
+[
+    "alert",
+    {
+        "id": "urn:uuid:80b60040-4729-11e4-916c-0800200c9a66",
+        "timestamp": "2010-11-12T16:14:15Z"
+    },
+    [
+        "intended-recipient",
+        [
+            "query-target",
+            {
+                "type": "urn:ihe:iti:csd:2014:stored-function:facility-search"
+            },
+            [
+                "requestParams",
+                [
+                    "codedType",
+                    {
+                        "code": "OPC",
+                        "codingSchema": "XXXXXX"
+                    }
+                ],
+                [
+                    "address",
+                    [
+                        "addressLine",
+                        {
+                            "component": "city"
+                        },
+                        "Chapel Hill"
+                    ]
+                ]
+            ]
+        ],
+        [
+            "target",
+            {
+                "id": "urn:ecid:1234"
+            },
+            [
+                "contact-point",
+                {
+                    "use-code": "CELL",
+                    "use-code-scheme": "http://localhost/EXAMPLE"
+                }
+            ]
+        ]
+    ],
+    [
+        "message",
+        {
+            "content-type": "text/plan; charset=utf-8",
+            "published": "2010-11-12T13:14:15Z",
+            "src": "http://emergencies.moh.gov.tk/alerts?id=2c9597f0-4729-11e4-916c-0800200c9a77",
+            "status-code": "Prioirity-Orange",
+            "status-code-scheme": "CAPS-Example",
+            "xml:lang": "en_US"
+        }
+    ]
+]

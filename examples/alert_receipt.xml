@@ -1,0 +1,11 @@
+<oh:alert-receipt
+    xmlns:oh="urn:openhie.org:alerting"
+    alert-id='2c9597f0-4729-11e4-916c-0800200c9a66'
+    recipient-id='2c9597f0-4729-11e4-916c-0800200c9a68'
+    timestamp='2010-11-12T13:14:15Z'
+    response-code='Prioirity-Orange'  
+    response-code-scheme='CAPS-Example'	
+    response-uri='http://localhost/Desktop/selfie.png'
+    latitude='0.00'
+    longitude='0.00'
+    />
