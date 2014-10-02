@@ -1,4 +1,4 @@
-title IntendedRecipients SOAP + AMQP
+title IntendedRecipients SOAP + ATOM
 
 Alert Pub->Alert Broker: Publish one or more messages in SOAP by specifying \n./s:Header/oh:IntendedRecpient and s:Body/oh:Message\n \noptionally set @statusCode and @statusCodeScheme to allow\n Alert Cons to receive only certain status messages
 
