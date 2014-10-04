@@ -1,24 +1,27 @@
-title IntendedRecipients SOAP + AMQP
+title IntendedRecipients Alert Broker with Receipt Report
 
-Alert Pub->Alert Broker: Publish message in SOAP by specifying \n./s:Header/oh:intended-recpient and s:Body/oh:message\n \noptionally set @statusCode and @statusCodeScheme to allow\n Alert Cons to receive only certain status alerts
-
-
-Alert Broker->Alert Pub:ACK (SOAP)
+Alert Pub->Alert Broker: Publish oh:Alert message in\n \noptionally set @statusCode and @statusCodeScheme
 
 
-loop over oh:intended-recipient/oh:query-target  
-Alert Broker->Human Reg: resolve recipients\nsend s:/Header\nnote: should allow for ability to cache\n/oh:inteneded-recipient/oh:target-query/*
+Alert Broker->Alert Pub:ACK 
+
+
+Alert Cons->Alert Broker: HTTP GET\nGive me an oh:alert \nAlert Cons can ask Alert Broker to resolve recipients or not
+note over Alert Cons: should this be a single oh:alert or a feed of oh:alert's?\n \n(in the later allow querting on\n- $timestamp\n- $page\n- $statusCode and $statusCodeScheme\n 
+
+opt [if Alert Cons want Alert Broker to resolve ]
+loop over /oh:alert/oh:intended-recipient/oh:query-target  
+Alert Broker->Human Reg: resolve recipients
 
 Human Reg->Alert Broker:here  is what I was able to resolve oh:intended-recipient to 
-Alert Broker->Alert Broker: put alert in queue with timestamp
+Alert Broker->Alert Broker: replace the /oh:alert/oh-intended-necipieints/oh:query-target \n with list of oh:target's
 
+end
 end
 
 
-Alert Cons->Alert Broker: HTTP GET\nGive me any alerts published since $timestamp on page $page\nand optional status $statusCode and $statusCodeScheme
 
-
-Alert Broker->Alert Cons: HTTP reposnse\n return ATOM feed of oh:alert
+Alert Broker->Alert Cons: HTTP response\n return ATOM feed of oh:alert / or a single feed
 note over Alert Cons:Can avoid carrying PHI by making use of oh:message/@src
 
 
@@ -27,7 +30,7 @@ loop OVER alert id.  RENDER CONTENT AND INTERACT WITH A HUMAN
 
 Alert Cons->Alert Broker: ACK on alert id\nHTTP POST
 Alert Broker->Alert Broker: remove alert from queue
-note over Alert Broker: next request for ATOM feed will have changed atom:updated\nQuestion: what are ACKing?\n-that the AC took responsibility to deliver the message 
+note over Alert Broker: the AC took responsibility to deliver the message 
 
 Alert Cons->Alert Cons: Fetch content from src@Series of Tubes 
 Alert Cons->Alert Cons: Render 
@@ -49,9 +52,9 @@ Alert Cons->Alert Reporter: HTTP POST\nATOM PUBLISH?\ncontent  oh:alert-receipt
 
 note over Alert Cons: response code could:\n-indicate "Yes, I saw someone with Ebola symptoms"\n-support ICP workflows\n\nsets @responseCode and @responseCodeScheme\n@timestamp and geo data
 
-Alert Pub->Alert Reporter: check status of  $alert-id\n SOAP
+Alert Pub->Alert Reporter: get oh:alert-receipt's for a given  $alert-id
 
-Alert Reporter->Alert Pub: return status\nSOAP \ncontains s:Body/oh:alert-receipt
+Alert Reporter->Alert Pub: atom feed of oh:alert-receipt's
 end
 end
 

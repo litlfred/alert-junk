@@ -6,10 +6,9 @@ function get_sequence_diagram($args) {
     foreach ($args as $key => $value ) {
         $params[] = urlencode($key) . "=" . urlencode($value);
     }
-
     $ch = curl_init("http://www.websequencediagrams.com");
     curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, implode("&", $params));
+    curl_setopt($ch, CURLOPT_POSTFIELDS, implode("&", $params));    
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($ch);
     $json = json_decode($response);
@@ -51,6 +50,7 @@ if (count($argv) > 1) {
 
 
 foreach( $files as  $file ) {
+    echo "DOING $file\n";
     $wsd = file_get_contents($file);    
     $img_url = get_sequence_diagram(
 	array(
