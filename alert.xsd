@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="urn:openhie.org:alerting" elementFormDefault="qualified"
     xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="urn:openhie.org:alerting">
+    xmlns="urn:openhie.org:alerting" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+    <xs:import schemaLocation="xmldsig-core-schema.xsd"
+        namespace="http://www.w3.org/2000/09/xmldsig#"/>
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" 
+        schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <xs:include schemaLocation="datatypes-base.xsd"/>
     <xs:complexType name="Target">
         <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="contact-point">
-                <xs:complexType>
-                    <xs:attribute name="use-code"/>
-                    <xs:attribute name="use-code-scheme"/>
-                    <xs:attribute name="value"/>
-                    <xs:anyAttribute/>
-                </xs:complexType>
-            </xs:element>
+            <xs:element maxOccurs="unbounded" name="telecom" type="TEL"/>
         </xs:sequence>
         <xs:attribute name="id">
             <xs:annotation>
@@ -63,6 +61,11 @@
         <xs:sequence>
             <xs:element name="intended-recipients" type="IntendedRecipients"/>
             <xs:element name="message" type="Message"/>
+            <xs:element minOccurs="0" name="signature" type="dsig:SignatureType">
+                <xs:annotation>
+                    <xs:documentation>Applies to the preceeding message element</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:sequence>
                 <xs:any/>
             </xs:sequence>

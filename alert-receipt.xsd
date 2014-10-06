@@ -2,20 +2,14 @@
 <xs:schema targetNamespace="urn:openhie.org:alerting" elementFormDefault="qualified"
     xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:openhie.org:alerting">
-    <xs:import schemaLocation="xmldsig-core-schema.xsd"/>
+    <xs:import schemaLocation="xmldsig-core-schema.xsd"
+        namespace="http://www.w3.org/2000/09/xmldsig#"/>
+    <xs:include schemaLocation="datatypes-base.xsd"/>
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" 
+        schemaLocation="http://www.w3.org/2001/xml.xsd"/>
     <xs:complexType name="Target">
         <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="contact-point">
-                <xs:annotation>
-                    <xs:documentation>Each target must have at least one valid contact point.  Example: "+1(919)555-1212"</xs:documentation>
-                </xs:annotation>
-                <xs:complexType>
-                    <xs:attribute name="use-code"/>
-                    <xs:attribute name="use-code-scheme"/>
-                    <xs:attribute name="value"/>
-                    <xs:anyAttribute/>
-                </xs:complexType>
-            </xs:element>
+            <xs:element maxOccurs="unbounded" name="telecom" type="TEL"/>
         </xs:sequence>
         <xs:attribute name="id">
             <xs:annotation>
@@ -68,7 +62,11 @@
         <xs:sequence>
             <xs:element name="intended-recipients" type="IntendedRecipients"/>
             <xs:element name="message" type="Message"/>
-            <xs:element minOccurs="0" name="signature" type="dsig:SignatureType"/>
+            <xs:element minOccurs="0" name="signature" type="dsig:SignatureType">
+                <xs:annotation>
+                    <xs:documentation>Applies to the preceeding message element</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:sequence>
                 <xs:any/>
             </xs:sequence>
