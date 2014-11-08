@@ -5,87 +5,31 @@
     <xs:import schemaLocation="xmldsig-core-schema.xsd"
         namespace="http://www.w3.org/2000/09/xmldsig#"/>
     <xs:include schemaLocation="datatypes-base.xsd"/>
-    <xs:import namespace="http://www.w3.org/XML/1998/namespace" 
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-    <xs:complexType name="Target">
-        <xs:sequence>
-            <xs:element maxOccurs="unbounded" name="telecom" type="TEL"/>
-        </xs:sequence>
-        <xs:attribute name="id">
+    <xs:include schemaLocation="alert.xsd"/>
+    <xs:complexType name="AlertReceipt">
+        <xs:attribute name="alert-id" use="required">
             <xs:annotation>
-                <xs:documentation>Enterprise identifer of the the human recipient</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-        <xs:anyAttribute/>
-    </xs:complexType>
-    <xs:complexType name="QueryTarget">
-        <xs:sequence>
-            <xs:any/>
-        </xs:sequence>
-        <xs:attribute name="type" use="required">
-            <xs:annotation>
-                <xs:documentation>Example:  &lt;ohie:QueryTarget type="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-        <xs:anyAttribute/>
-    </xs:complexType>
-    <xs:complexType name="IntendedRecipients">
-        <xs:choice maxOccurs="unbounded">
-            <xs:element name="query-target" type="QueryTarget"> </xs:element>
-            <xs:element name="target" type="Target"> </xs:element>
-        </xs:choice>
-        <xs:anyAttribute/>
-    </xs:complexType>
-    <xs:complexType name="Message">
-        <xs:sequence>
-            <xs:any/>
-        </xs:sequence>
-        <xs:attribute name="content-type" use="required">
-            <xs:annotation>
-                <xs:documentation>mime-type</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="src" type="xs:anyURI">
-            <xs:annotation>
-                <xs:documentation>Optional attribute.  If present and non-empty then there can be nothing under Message element.  Otherwise content is under Message element. Similar to atom:content. If there is content may include PHI triggering audit requirements.
+                <xs:documentation>UUID
 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="status-code"/>
-        <xs:attribute name="status-code-scheme"/>
-        <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
-        <xs:attribute ref="xml:lang"/>
-        <xs:attribute name="subject-of-care"/>
-        <xs:anyAttribute/>
-    </xs:complexType>
-    <xs:complexType name="Alert">
-        <xs:sequence>
-            <xs:element name="intended-recipients" type="IntendedRecipients"/>
-            <xs:element name="message" type="Message"/>
-            <xs:element minOccurs="0" name="signature" type="dsig:SignatureType">
-                <xs:annotation>
-                    <xs:documentation>Applies to the preceeding message element</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:sequence>
-                <xs:any/>
-            </xs:sequence>
-        </xs:sequence>
-        <xs:attribute name="id" use="required"/>
-        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
-        <xs:anyAttribute/>
-    </xs:complexType>
-    <xs:element name="alert" type="Alert"> </xs:element>
-    <xs:complexType name="AlertReceipt">
-        <xs:attribute name="alert-id" use="required"/>
-        <xs:attribute name="recipient-id" use="required"/>
-        <xs:attribute name="response-code"/>
-        <xs:attribute name="response-code-scheme"/>
-        <xs:attribute name="response-code-uri" type="xs:anyURI"/>
+        <xs:attribute name="recipient-id" use="required">
+            <xs:annotation>
+                <xs:documentation>Network identifer of the the human recipient. URN</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="response-code" use="required"/>
+        <xs:attribute name="response-code-scheme" use="required">
+            <xs:annotation>
+                <xs:documentation>URN</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="latitude"/>
         <xs:attribute name="longitude"/>
         <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
-        <xs:anyAttribute/>
+        <xs:attribute name="response-uri" type="xs:anyURI"/>
     </xs:complexType>
     <xs:element name="alert-receipt" type="AlertReceipt"> </xs:element>
 </xs:schema>
