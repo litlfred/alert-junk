@@ -17,27 +17,6 @@
             </xs:annotation>
         </xs:attribute>
     </xs:complexType>
-    <xs:complexType name="TargetCohort">
-        <xs:sequence>
-            <xs:any/>
-        </xs:sequence>
-        <xs:attribute name="query-name" use="required">
-            <xs:annotation>
-                <xs:documentation>A couple defined by profile.
-   urn:ihe:iti:@@h:2015:query-name:csd-provider-search
-   urn:ihe:iti:@@h:2015:query-name:fhir:dstu_v1
-   urn:ihe:iti:@@h:2015:query-name:fhir:PDQm
-   
-   </xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-    </xs:complexType>
-    <xs:complexType name="IntendedRecipients">
-        <xs:choice maxOccurs="unbounded">
-            <xs:element name="target-cohort" type="TargetCohort"> </xs:element>
-            <xs:element name="target" type="Target"> </xs:element>
-        </xs:choice>
-    </xs:complexType>
     <xs:complexType name="Status">
         <xs:attribute name="status-code-scheme">
             <xs:annotation>
@@ -76,7 +55,7 @@ others could include for example
     </xs:complexType>
     <xs:complexType name="Alert">
         <xs:sequence>
-            <xs:element name="intended-recipients" type="IntendedRecipients"/>
+            <xs:element name="target" type="Target" maxOccurs="unbounded"> </xs:element>
             <xs:element name="message" type="Message"/>
             <xs:element maxOccurs="unbounded" minOccurs="0" name="status" type="Status"/>
         </xs:sequence>
