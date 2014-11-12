@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aah:alert 
+ xmlns:aah="urn:openhie.org:alerting"
+ xmlns:csd="urn:ihe:iti:csd:2013" >
+    <aah:intended-recipients>
+        <aah:target-cohort  query-name="urn:ihe:iti:@@h:2015:query-name:csd-provider-search">
+	  <csd:careServicesRequest >
+	    <csd:function urn="urn:ihe:iti:csd:2014:stored-function:provider-search">
+	      <csd:requestParams>					
+		<csd:address>
+		  <csd:addressLine component="city">Santa Fe</csd:addressLine>
+		</csd:address>
+	      </csd:requestParams>
+	    </csd:function>
+	  </csd:careServicesRequest>
+        </aah:target-cohort>
+    </aah:intended-recipients>
+    <aah:message 
+	message-id="2110BC92-F84C-4095-9FAD-CAEF821A4096"
+	published="2006-05-04T18:13:51.0Z" 
+	type="urn:ihe:2015:@@h:message-types:text/link"
+	xml:lang='en'
+	link='http://www.cdc.gov/vhf/ebola/'>There has been an outbreak of ebola in your neighborhood. More information can be found from the CDC.
+    </aah:message>
+</aah:alert>

@@ -24,9 +24,16 @@
         <xs:sequence>
             <xs:any/>
         </xs:sequence>
-        <xs:attribute name="name" use="required">
+        <xs:attribute name="query-name" use="required">
             <xs:annotation>
-                <xs:documentation>Example:  &lt;ohie:QueryTarget name="urn:ihe:iti:csd:2014:stored-function:facility-search"&gt;</xs:documentation>
+                <xs:documentation>A couple defined by profile
+  
+   urn:ihe:iti:csd:2014:stored-function:proivder-search
+   urn:ihe:iti:@@h:2015:query-name:csd-provider-search
+   urn:ihe:iti:@@h:2015:query-name:fhir:dstu_v1
+   urn:ihe:iti:@@h:2015:query-name:fhir:PDQm
+   
+   </xs:documentation>
             </xs:annotation>
         </xs:attribute>
         <xs:attribute name="src" type="xs:anyURI">
@@ -42,72 +49,49 @@
             <xs:element name="target-cohort" type="TargetCohort"> </xs:element>
             <xs:element name="target" type="Target"> </xs:element>
         </xs:choice>
-        <xs:anyAttribute/>
     </xs:complexType>
-    <xs:complexType name="MessageBase">
-        <xs:attribute name="status-code"/>
+    <xs:complexType name="Status">
         <xs:attribute name="status-code-scheme">
             <xs:annotation>
                 <xs:documentation>URN
 </xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
-        <xs:attribute ref="xml:lang"/>
+        <xs:attribute name="status-code"/>
+    </xs:complexType>
+    <xs:complexType name="Message">
+        <xs:sequence>
+            <xs:any/>
+        </xs:sequence>
+        <xs:attribute name="message-id" use="required">
+            <xs:annotation>
+                <xs:documentation>UUID</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="subject-of-care">
             <xs:annotation>
                 <xs:documentation>Network identifer of the the human subject of care. URN</xs:documentation>
             </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="published" type="xs:dateTimeStamp" use="required"/>
         <xs:attribute name="expires" type="xs:dateTimeStamp"/>
-    </xs:complexType>
-    <xs:complexType name="Message">
-        <xs:annotation>
-            <xs:documentation>Potential PHI is carried.  ATNA is required if @subject-of-care is set</xs:documentation>
-        </xs:annotation>
-        <xs:complexContent>
-            <xs:extension base="MessageBase">
-                <xs:sequence>
-                    <xs:any/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-    <xs:complexType name="MessageReference">
-        <xs:annotation>
-            <xs:documentation>No PHI is carried.  No ATNA required</xs:documentation>
-        </xs:annotation>
-        <xs:complexContent>
-            <xs:extension base="MessageBase">
-                <xs:attribute name="src" type="xs:anyURI"/>
-            </xs:extension>
-        </xs:complexContent>
+        <xs:attribute ref="xml:lang"/>
+        <xs:attribute name="type">
+            <xs:annotation>
+                <xs:documentation>URN to identify message content and behaviour of AC.  profile will define:
+	urn:ihe:2015:@@h:message-types:plain/text
+others could include for example
+	urh:ihe:2015:@@h:message-types:pcc_form_submission</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="follow-up" type="xs:anyURI"/>
     </xs:complexType>
     <xs:complexType name="Alert">
         <xs:sequence>
             <xs:element name="intended-recipients" type="IntendedRecipients"/>
-            <xs:choice>
-                <xs:element name="message-reference" type="MessageReference"/>
-                <xs:sequence>
-                    <xs:element name="message" type="Message"/>
-                    <xs:element minOccurs="0" name="signature" type="dsig:SignatureType">
-                        <xs:annotation>
-                            <xs:documentation>Applies to the preceeding message element</xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:choice>
-            <xs:sequence>
-                <xs:any/>
-            </xs:sequence>
+            <xs:element name="message" type="Message"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="status" type="Status"/>
         </xs:sequence>
-        <xs:attribute name="id" use="required">
-            <xs:annotation>
-                <xs:documentation>UUID</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
-        <xs:anyAttribute/>
     </xs:complexType>
     <xs:element name="alert" type="Alert"> </xs:element>
 </xs:schema>

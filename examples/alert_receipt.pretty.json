@@ -1,0 +1,15 @@
+[
+    "aah:receipt",
+    {
+        "message-id": "2110BC92-F84C-4095-9FAD-CAEF821A4096",
+        "recipient-id": "8D37B355-EACA-447E-9BD4-746A5B0921AF",
+        "timestamp": "2006-05-04T18:13:51.0Z"
+    },
+    [
+        "aah:status",
+        {
+            "code": "attempted-delivery",
+            "code-scheme": "urn:ihe:2015:@@h:status-code"
+        }
+    ]
+]

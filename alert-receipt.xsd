@@ -8,8 +8,8 @@
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/xml.xsd"/>
     <xs:include schemaLocation="alert.xsd"/>
-    <xs:complexType name="AlertReceipt">
-        <xs:attribute name="alert-id" use="required">
+    <xs:complexType name="Receipt">
+        <xs:attribute name="message-id" use="required">
             <xs:annotation>
                 <xs:documentation>UUID
 </xs:documentation>
@@ -20,16 +20,27 @@
                 <xs:documentation>Network identifer of the the human recipient. URN</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="response-code" use="required"/>
-        <xs:attribute name="response-code-scheme" use="required">
-            <xs:annotation>
-                <xs:documentation>URN</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
+        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
         <xs:attribute name="latitude"/>
         <xs:attribute name="longitude"/>
-        <xs:attribute name="timestamp" type="xs:dateTimeStamp"/>
-        <xs:attribute name="response-uri" type="xs:anyURI"/>
     </xs:complexType>
-    <xs:element name="alert-receipt" type="AlertReceipt"> </xs:element>
+    <xs:element name="receipt">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="Receipt">
+                    <xs:choice>
+                        <xs:element minOccurs="0" name="status">
+                            <xs:complexType>
+                                <xs:complexContent>
+                                    <xs:extension base="Status">
+                                        <xs:attribute name="response-content-uri" type="xs:anyURI"/>
+                                    </xs:extension>
+                                </xs:complexContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

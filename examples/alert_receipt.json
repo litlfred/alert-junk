@@ -1,13 +1,1 @@
-[
-    "alert-receipt",
-    {
-        "alert-id": "2c9597f0-4729-11e4-916c-0800200c9a66",
-        "latitude": "0.00",
-        "longitude": "0.00",
-        "recipient-id": "2c9597f0-4729-11e4-916c-0800200c9a68",
-        "response-code": "Prioirity-Orange",
-        "response-code-scheme": "CAPS-Example",
-        "response-uri": "http://localhost/Desktop/selfie.png",
-        "timestamp": "2010-11-12T13:14:15Z"
-    }
-]
+["aah:receipt",{"message-id":"2110BC92-F84C-4095-9FAD-CAEF821A4096","recipient-id":"8D37B355-EACA-447E-9BD4-746A5B0921AF","timestamp":"2006-05-04T18:13:51.0Z"},"\n  ",["aah:status",{"code":"attempted-delivery","code-scheme":"urn:ihe:2015:@@h:status-code"}],"\n"]
