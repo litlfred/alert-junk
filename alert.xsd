@@ -3,8 +3,6 @@
     xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:cda="urn:hl7-org:v3"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:openhie.org:alerting"
     xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
-    <xs:import schemaLocation="xmldsig-core-schema.xsd"
-        namespace="http://www.w3.org/2000/09/xmldsig#"/>
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"
         schemaLocation="http://www.w3.org/2001/xml.xsd"/>
     <xs:import namespace="urn:hl7-org:v3" schemaLocation="POCD_MT000040.xsd"/>
@@ -18,7 +16,6 @@
                 <xs:documentation>Network identifer of the the human recipient. URN</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:anyAttribute/>
     </xs:complexType>
     <xs:complexType name="TargetCohort">
         <xs:sequence>
@@ -26,9 +23,7 @@
         </xs:sequence>
         <xs:attribute name="query-name" use="required">
             <xs:annotation>
-                <xs:documentation>A couple defined by profile
-  
-   urn:ihe:iti:csd:2014:stored-function:proivder-search
+                <xs:documentation>A couple defined by profile.
    urn:ihe:iti:@@h:2015:query-name:csd-provider-search
    urn:ihe:iti:@@h:2015:query-name:fhir:dstu_v1
    urn:ihe:iti:@@h:2015:query-name:fhir:PDQm
@@ -36,13 +31,6 @@
    </xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="src" type="xs:anyURI">
-            <xs:annotation>
-                <xs:documentation>URI of service which accepts search parameters which are syntaticaly and semantically defined by the reference in @name
-</xs:documentation>
-            </xs:annotation>
-        </xs:attribute>
-        <xs:anyAttribute/>
     </xs:complexType>
     <xs:complexType name="IntendedRecipients">
         <xs:choice maxOccurs="unbounded">
@@ -84,7 +72,7 @@ others could include for example
 	urh:ihe:2015:@@h:message-types:pcc_form_submission</xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="follow-up" type="xs:anyURI"/>
+        <xs:attribute name="link" type="xs:anyURI"/>
     </xs:complexType>
     <xs:complexType name="Alert">
         <xs:sequence>
